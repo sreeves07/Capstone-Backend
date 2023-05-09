@@ -16,7 +16,7 @@ CREATE TABLE mate (
     State VARCHAR(40),
     Birthday DATE,
     Gender VARCHAR(20)
-    Sexual_Orientation VARCHAR(50),
+    Orientation VARCHAR(50),
     Has_Pets BOOLEAN, 
     Has_Open_Rooms BOOLEAN,
     Is_Smoker BOOLEAN
