@@ -5,13 +5,13 @@ CREATE DATABASE bestmates_app;
 
 DROP TABLE IF EXISTS bestmates_app;
 
-CREATE TABLE user (
+CREATE TABLE mate (
     id SERIAL PRIMARY KEY,
     First_Name VARCHAR(40),
     Last_Name VARCHAR(40),
     Password VARCHAR(40),
     Age INT,
-    Email VARCHAR(60), 
+    Egitmail VARCHAR(60), 
     City VARCHAR(40),
     State VARCHAR(40),
     Birthday DATE,
