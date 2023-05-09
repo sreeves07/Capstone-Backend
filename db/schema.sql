@@ -50,7 +50,7 @@ CREATE TABLE answers (
     Share_Bills_Preference BOOLEAN,
     Religious_Preference BOOLEAN,
     Good_Credit_Preference BOOLEAN,
-    High_Income__Preference BOOLEAN
+    High_Income_Preference BOOLEAN
 );
 
 DROP TABLE IF EXISTS Images;

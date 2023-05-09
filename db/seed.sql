@@ -18,4 +18,17 @@ VALUES
     ('Sara', 'Harris', 'Green256', 30, 'sara.harris@hotmail.com', 'Dallas', 'TX', '1991-12-22', 'Female', 'Bisexual', false, true, false, false, false, true, true, false, '2023-07-15', 1700, 750, 55000),
     ('Steven', 'Jackson', 'Green256', 24, 'steven.jackson@yahoo.com', 'Las Vegas', 'NV', '1997-09-03', 'Male', 'Straight', true,  true, true, true, false, true, true, true, '2023-06-01', 2000, 590, 95000),
     ('Catherine', 'Martin', 'Green256', 35, 'catherine.martin@gmail.com', 'Philadelphia', 'PA', '1986-05-18', 'Female', 'Lesbian', true, false, false, true, false, false, true, false, '2023-07-15', 2700, 670, 67000),
-    ('Alex', 'Lee', 21, 'Green256', 'alex.lee@hotmail.com', 'Minneapolis', 'MN', '2000-01-02', 'Non-binary', 'Queer', true, false, false, false, false, false, true, false, '2023-06-15', 1350, 750, 85000),
+    ('Alex', 'Lee', 21, 'Green256', 'alex.lee@hotmail.com', 'Minneapolis', 'MN', '2000-01-02', 'Non-binary', 'Queer', true, false, false, false, false, false, true, false, '2023-06-15', 1350, 750, 85000);
+
+INSERT INTO answers (Pets_Preference, Sexual_Orientation_Preference, Open_Rooms_Preference, Neat_Preference, Kids_Preference, Low_Noise_Preference, Smoker_Preference, High_Rise_Preference, House_Preference, Private_Bathroom_Preference, Private_Room_Preference, Share_Bills_Preference, Religious_Preference, Good_Credit_Preference, High_Income_Preference )
+VALUES
+    (true, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    (true, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    (true, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    (true, 'Heterosexual', false, true, false, 'Low noise', 'Non-smoker', 'Low rise', 'House', 'Private bathroom', 'Private room', 'Splitting bills', 'Not religious', 'Good credit', 'High income'),
+    (true, 'Pansexual', false, false, true, 'High noise', 'Smoker', 'High rise', 'Apartment', 'Shared bathroom', 'Shared room', 'Splitting bills', 'Somewhat religious', 'Fair credit', 'Low income'),
+    (false, 'Homosexual', true, false, false, 'Low noise', 'Non-smoker', 'High rise', 'House or apartment', 'Private bathroom', 'Private room', 'Sharing bills', 'Somewhat religious', 'Good credit', 'High income'),
+    (true, 'Heterosexual', false, true, false, 'Low noise', 'Non-smoker', 'Low rise', 'House', 'Private bathroom', 'Private room', 'Splitting bills', 'Not religious', 'Good credit', 'High income'),
+    (false, 'Bisexual', false, true, true, 'Low noise', 'Non-smoker', 'High rise', 'Apartment', 'Shared bathroom', 'Shared room', 'Sharing bills', 'Not religious', 'Good credit', 'High income'),
+    (false, 'Heterosexual', true, false, true, 'High noise', 'Smoker', 'Low rise', 'House', 'Private bathroom', 'Private room', 'Splitting bills', 'Not religious', 'Fair credit', 'Low income'),
+    (false, 'Homosexual', true, false, false, 'High noise', 'Smoker', 'High rise', 'Apartment', 'Shared bathroom', 'Shared room', 'Sharing bills', 'Somewhat religious', 'Good credit', 'High income');
