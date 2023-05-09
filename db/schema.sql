@@ -31,3 +31,33 @@ CREATE TABLE mate (
     Income INT
 );
 
+DROP TABLE IF EXISTS answers;
+
+CREATE TABLE answers ( 
+    id SERIAL PRIMARY KEY,
+    Pets_Preference BOOLEAN,
+    Sexual_Orientation_Preference TEXT,
+    Open_Rooms_Preference BOOLEAN,
+    Neat_Preference BOOLEAN,
+    Kids_Preference BOOLEAN,
+    Low_Noise_Preference BOOLEAN,
+    Smoker_Preference BOOLEAN,
+    High_Rise_Preference BOOLEAN,
+    House_Preference BOOLEAN,
+    Private_Bathroom_Preference BOOLEAN,
+    Private_Room_Preference BOOLEAN,
+    Share_Bills_Preference BOOLEAN,
+    Religious_Preference BOOLEAN,
+    Good_Credit_Preference BOOLEAN,
+    High_Income_Preference BOOLEAN,
+    mate_id INTEGER REFERENCES mate (id)
+    ON DELETE CASCADE
+);
+    
+-- DROP TABLE IF EXISTS images;
+    
+-- CREATE TABLE images (
+--     id SERIAL FOREIGN KEY,
+--     Photo_Id SERIAL PRIMARY KEY,
+--     Profile_Image TEXT
+-- );

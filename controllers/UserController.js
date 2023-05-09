@@ -8,7 +8,9 @@ const {
   updateUser,
   deleteUser,
 } = require('../queries/User');
+const answersController = require('./AnswerController');
 
+user.use('/:mateId/answers', answersController);
 //Index
 user.get('/', async (req, res) => {
   const allUser = await getAllUser();

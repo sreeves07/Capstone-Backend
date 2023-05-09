@@ -20,3 +20,23 @@ VALUES
     ('Catherine', 'Martin', 'Green256', 35, 'catherine.martin@gmail.com', 'Philadelphia', 'PA', '1986-05-18', 'Female', 'Lesbian', true, false, false, true, false, false, true, false, '2023-07-15', 2700, 670, 67000),
     ('Alex', 'Lee', 'Green256', 21, 'alex.lee@hotmail.com', 'Minneapolis', 'MN', '2000-01-02', 'Non-binary', 'Queer', true, false, false, false, false, false, true, false, '2023-06-15', 1350, 750, 85000);
 
+INSERT INTO answers (mate_id, Pets_Preference, Sexual_Orientation_Preference, Open_Rooms_Preference, Neat_Preference, Kids_Preference, Low_Noise_Preference, Smoker_Preference, High_Rise_Preference, House_Preference, Private_Bathroom_Preference, Private_Room_Preference, Share_Bills_Preference, Religious_Preference, Good_Credit_Preference, High_Income_Preference)
+VALUES
+    ('1', true, 'Pansexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('2',false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('3',false, 'Heterosexual', true, false, false, false, false, true, true, true, true, true, true, true, false),
+    ('4',false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('5',false, 'Homosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('6',true, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('7',false, 'Homosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('8',false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('9',true, 'Pansexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('10',true, 'Bisexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('11',false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('12',false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('13',false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('14',false, 'Homosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('15',true, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('16',false, 'Homosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('17',false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true);
+
