@@ -18,5 +18,5 @@ VALUES
     ('Sara', 'Harris', 'Green256', 30, 'sara.harris@hotmail.com', 'Dallas', 'TX', '1991-12-22', 'Female', 'Bisexual', false, true, false, false, false, true, true, false, '2023-07-15', 1700, 750, 55000),
     ('Steven', 'Jackson', 'Green256', 24, 'steven.jackson@yahoo.com', 'Las Vegas', 'NV', '1997-09-03', 'Male', 'Straight', true,  true, true, true, false, true, true, true, '2023-06-01', 2000, 590, 95000),
     ('Catherine', 'Martin', 'Green256', 35, 'catherine.martin@gmail.com', 'Philadelphia', 'PA', '1986-05-18', 'Female', 'Lesbian', true, false, false, true, false, false, true, false, '2023-07-15', 2700, 670, 67000),
-    ('Alex', 'Lee', 21, 'Green256', 'alex.lee@hotmail.com', 'Minneapolis', 'MN', '2000-01-02', 'Non-binary', 'Queer', true, false, false, false, false, false, true, false, '2023-06-15', 1350, 750, 85000);
+    ('Alex', 'Lee', 'Green256', 21, 'alex.lee@hotmail.com', 'Minneapolis', 'MN', '2000-01-02', 'Non-binary', 'Queer', true, false, false, false, false, false, true, false, '2023-06-15', 1350, 750, 85000);
 
