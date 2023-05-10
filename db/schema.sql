@@ -63,3 +63,12 @@ CREATE TABLE images (
     mate_id INTEGER REFERENCES mate (id)
     ON DELETE CASCADE
 );
+
+DROP TABLE IF EXISTS bio;
+
+CREATE TABLE bio (
+    id SERIAL PRIMARY KEY,
+    small_bio VARCHAR(70),
+    mate_id INTEGER REFERENCES mate (id)
+    ON DELETE CASCADE
+)

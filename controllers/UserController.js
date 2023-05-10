@@ -10,10 +10,11 @@ const {
 } = require('../queries/User');
 const answersController = require('./AnswerController');
 const imageController = require('./ImageController');
+const bioController = require('./BioController');
 
 user.use('/:mateId/answers', answersController);
 user.use('/:mateId/images', imageController);
-
+user.use('/:mateId/bios', bioController);
 //Index
 user.get('/', async (req, res) => {
   const allUser = await getAllUser();

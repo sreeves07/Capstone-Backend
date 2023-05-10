@@ -58,3 +58,22 @@ INSERT INTO images (mate_id, Profile_Image) VALUES
     ('15', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735872/Bestmates/leio-mclaren-L2dTmhQzx4Q-unsplash_xaz618.jpg'),
     ('16', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735884/Bestmates/princess-4glIyBjf2Gk-unsplash_m0evxo.jpg'),
     ('17', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735900/Bestmates/ethan-rougon-uZBCgRDKsko-unsplash_ms20ee.jpg');
+
+INSERT INTO bio (mate_id, small_bio) VALUES
+    ('1', 'I love to travel and try new foods.'),
+    ('2', 'I enjoy reading and playing video games.'),
+    ('3', 'I am a fitness enthusiast and love to hike.'),
+    ('4', 'I am a musician and enjoy playing guitar.'),
+    ('5', 'I am a foodie and love to cook.'),
+    ('6', 'I am a movie buff and enjoy watching all kinds of films.'),
+    ('7', 'I am an avid runner and participate in marathons.'),
+    ('8', 'I am a collector and have a large collection of vintage items.'),
+    ('9', 'I enjoy playing basketball and watching sports.'),
+    ('10', 'I am a photographer and love to capture special moments.'),
+    ('11', 'I am a history buff and enjoy learning about the past.'),
+    ('12', 'I am a writer and enjoy writing short stories.'),
+    ('13', 'I am a coffee addict and love to try new blends.'),
+    ('14', 'I am a nature lover and enjoy spending time outdoors.'),
+    ('15', 'I am a gamer and love to play online with friends.'),
+    ('16', 'I am a traveler and have been to over 20 countries.'),
+    ('17', 'I am a fashionista and love to keep up with the latest trends.');
