@@ -35,6 +35,7 @@ DROP TABLE IF EXISTS answers;
 
 CREATE TABLE answers ( 
     id SERIAL PRIMARY KEY,
+    Gender_Preference VARCHAR(20),
     Pets_Preference BOOLEAN,
     Sexual_Orientation_Preference TEXT,
     Open_Rooms_Preference BOOLEAN,
@@ -54,10 +55,11 @@ CREATE TABLE answers (
     ON DELETE CASCADE
 );
     
--- DROP TABLE IF EXISTS images;
+DROP TABLE IF EXISTS images;
     
--- CREATE TABLE images (
---     id SERIAL FOREIGN KEY,
---     Photo_Id SERIAL PRIMARY KEY,
---     Profile_Image TEXT
--- );
+CREATE TABLE images (
+    id SERIAL PRIMARY KEY,
+    Profile_Image TEXT,
+    mate_id INTEGER REFERENCES mate (id)
+    ON DELETE CASCADE
+);

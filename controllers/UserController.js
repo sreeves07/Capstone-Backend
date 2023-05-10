@@ -9,8 +9,11 @@ const {
   deleteUser,
 } = require('../queries/User');
 const answersController = require('./AnswerController');
+const imageController = require('./ImageController');
 
 user.use('/:mateId/answers', answersController);
+user.use('/:mateId/images', imageController);
+
 //Index
 user.get('/', async (req, res) => {
   const allUser = await getAllUser();
