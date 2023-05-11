@@ -71,4 +71,4 @@ CREATE TABLE bio (
     small_bio VARCHAR(70),
     mate_id INTEGER REFERENCES mate (id)
     ON DELETE CASCADE
-)
+);
