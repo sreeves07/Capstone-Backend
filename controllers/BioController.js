@@ -46,7 +46,7 @@ bio.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const deletedBio = await deleteBio(id);
-    res.status(200).json({ deletedBio });
+    res.status(200).json(deletedBio);
   } catch (error) {
     res.status(404).json({ error: 'ID NOT FOUND' });
   }

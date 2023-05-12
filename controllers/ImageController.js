@@ -46,7 +46,7 @@ image.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const deletedImage = await deleteImage(id);
-    res.status(200).json({ deletedImage });
+    res.status(200).json(deletedImage);
   } catch (error) {
     res.status(404).json({ error: 'ID NOT FOUND' });
   }

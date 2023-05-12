@@ -72,3 +72,12 @@ CREATE TABLE bio (
     mate_id INTEGER REFERENCES mate (id)
     ON DELETE CASCADE
 );
+
+DROP TABLE IF EXISTS liked_user;
+
+CREATE TABLE liked_user (
+    id SERIAL PRIMARY KEY,
+    MateId_liked_user INT,
+    mate_id INTEGER REFERENCES mate (id)
+    ON DELETE CASCADE
+);

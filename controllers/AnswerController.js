@@ -46,7 +46,7 @@ answer.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const deletedAnswer = await deleteAnswer(id);
-    res.status(200).json({ deletedAnswer });
+    res.status(200).json(deletedAnswer);
   } catch (error) {
     res.status(404).json({ error: 'ID NOT FOUND' });
   }

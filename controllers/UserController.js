@@ -11,10 +11,12 @@ const {
 const answersController = require('./AnswerController');
 const imageController = require('./ImageController');
 const bioController = require('./BioController');
+const likedUserController = require('./LikedUserController');
 
 user.use('/:mateId/answers', answersController);
 user.use('/:mateId/images', imageController);
 user.use('/:mateId/bios', bioController);
+user.use('/:mateId/likes', likedUserController);
 //Index
 user.get('/', async (req, res) => {
   const allUser = await getAllUser();
@@ -51,7 +53,7 @@ user.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const deletedUser = await deleteUser(id);
-    res.status(200).json({ deletedUser });
+    res.status(200).json(deletedUser);
   } catch (error) {
     res.status(404).json({ error: 'ID NOT FOUND' });
   }
