@@ -79,6 +79,6 @@ INSERT INTO bio (mate_id, small_bio) VALUES
     ('17', 'I am a fashionista and love to keep up with the latest trends.');
 
 INSERT INTO liked_user (mate_id,  MateId_liked_user) VALUES
+    ('1', '3'),
     ('1', '2'),
-    ('1', '2'),
-    ('1', '2');
+    ('1', '15');
