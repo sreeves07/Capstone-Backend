@@ -24,7 +24,7 @@ const getUser = async (id) => {
 const createUser = async (user) => {
   try {
     const newUser = await db.one(
-      'INSERT INTO answers (First_Name, Last_Name, Password, Age, Email, City, State, Birthday, Gender, Sexual_Orientation, Has_Pets, Has_Open_Rooms, Is_Smoker, Has_Kids, Is_Disabled, Is_Sharing_bills, Is_Neat, Is_Religious, Move_In_Date, Max_Rent, Credit_Score, Income) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22) RETURNING *',
+      'INSERT INTO mate (First_Name, Last_Name, Password, Age, Email, City, State, Birthday, Gender, Sexual_Orientation, Has_Pets, Has_Open_Rooms, Is_Smoker, Has_Kids, Is_Disabled, Is_Sharing_bills, Is_Neat, Is_Religious, Move_In_Date, Max_Rent, Credit_Score, Income) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22) RETURNING *',
       [
         user.First_Name,
         user.Last_Name,
