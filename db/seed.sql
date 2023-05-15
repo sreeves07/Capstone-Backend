@@ -1,6 +1,6 @@
 \c bestmates_app
 
-INSERT INTO mate (First_Name, Last_Name, Password, Age, Email, City, State, Birthday, Gender, Sexual_Orientation, Has_Pets, Has_Open_Rooms, Is_Smoker, Has_Kids, Is_Disabled, Is_Sharing_bills, Is_Neat, Is_Religious, Move_In_Date, Max_Rent, Credit_Score, Income)
+INSERT INTO mate (first_name, last_name, password, age, email, city, state, birthday, gender, sexual_orientation, has_pets, has_open_rooms, is_smoker, has_kids, is_disabled, is_sharing_bills, is_neat, is_religious, move_in_date, max_rent, credit_score, income)
 VALUES 
     ('John', 'Doe', 'Green256', 25, 'john.doe@gmail.com', 'New York City', 'NY', '1998-06-01', 'Male', 'Straight', true, false, false, false, false, true, true, true, '2023-06-01', 1500, 750, 50000),
     ('Jane', 'Smith', 'Green256', 32, 'jane.smith@hotmail.com', 'Los Angeles', 'CA', '1991-09-12', 'Female', 'Bisexual', false, true, true, true, false, true, false, false, '2023-06-01', 1800, 800, 60000),
