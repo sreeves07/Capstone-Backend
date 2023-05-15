@@ -27,7 +27,7 @@ const getAnswer = async (id) => {
 const createAnswer = async (answer) => {
   try {
     const newUser = await db.one(
-      'INSERT INTO answers (mate_id, gender_preference, pets_preference, sexual_orientation_preference, open_rooms_preference, neat_preference, kids_preference, low_noise_preference, smoker_preference, high_rise_preference, house_preference, private_bathroom_preference, private_room_preference, share_bills_preference, religious_preference, good_credit_preference, high_income_preference) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23) RETURNING *',
+      'INSERT INTO answers (mate_id, gender_preference, pets_preference, sexual_orientation_preference, open_rooms_preference, neat_preference, kids_preference, low_noise_preference, smoker_preference, high_rise_preference, house_preference, private_bathroom_preference, private_room_preference, share_bills_preference, religious_preference, good_credit_preference, high_income_preference) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16) RETURNING *',
       [
         answer.gender_preference,
         answer.pets_preference,
