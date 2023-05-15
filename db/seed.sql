@@ -2,23 +2,23 @@
 
 INSERT INTO mate (first_name, last_name, password, email, city, state, zip_code, birthday, gender, sexual_orientation, has_pets, has_open_rooms, is_smoker, has_kids, is_disabled, is_sharing_bills, is_neat, is_religious, move_in_date, max_rent, credit_score, income)
 VALUES 
-    ('John', 'Doe', 'Green256', 25, 'john.doe@gmail.com', 'New York City', 'NY', 10001, '1998-06-01', 'Male', 'Straight', true, false, false, false, false, true, true, true, '2023-06-01', 1500, 750, 50000),
-    ('Jane', 'Smith', 'Green256', 32, 'jane.smith@hotmail.com', 'Los Angeles', 'CA', 90001, '1991-09-12', 'Female', 'Bisexual', false, true, true, true, false, true, false, false, '2023-06-01', 1800, 800, 60000),
-    ('Mike', 'Johnson', 'Green256', 40, 'mike.johnson@yahoo.com', 'Chicago', 'IL', 60601, '1983-04-08', 'Male', 'Gay', true, false, false, true, false, false, true, false, '2023-06-15', 1200, 700, 40000),
-    ('Sarah', 'Lee', 'Green256', 28, 'sarah.lee@gmail.com', 'Houston', 'TX', 77001, '1995-02-14', 'Female', 'Straight', true, false, true, false, false, true, false, true, '2023-06-01', 1300, 650, 45000),
-    ('Tom', 'Wang', 'Green256', 23, 'tom.wang@hotmail.com', 'San Francisco', 'CA', 94102, '1998-08-23', 'Male', 'Bisexual', false, true, false, false, false, true, true, false, '2023-06-15', 1700, 750, 55000),
-    ('Emily', 'Davis', 'Green256', 31, 'emily.davis@gmail.com', 'Miami', 'FL', 33101, '1990-12-03', 'Female', 'Lesbian', true, false, false, true, true, true, false, true, '2023-06-01', 1400, 700, 50000),
-    ('David', 'Nguyen', 'Green256', 27, 'david.nguyen@yahoo.com', 'Seattle', 'WA', 98101, '1994-07-11', 'Non-Binary', 'Straight', true, true, true, false, false, false, true, false, '2023-06-15', 1600, 800, 65000),
-    ('Karen', 'Brown', 'Green256', 36, 'karen.brown@gmail.com', 'Boston', 'MA', 02101, '1985-01-29', 'Female', 'Bisexual', true, true, true, true, true, true, true, true, '2023-06-01', 1900, 850, 75000),
-    ('Chris', 'Garcia', 'Green256', 22, 'chris.garcia@hotmail.com', 'Austin', 'TX', 78701, '1999-05-09', 'Male', 'Straight', false, false, true, false, false, false, false, true, '2023-06-15', 2000, 725, 80000),
-    ('Lisa', 'Taylor', 'Green256', 29, 'lisa.taylor@gmail.com', 'Denver', 'CO', 80202, '1992-11-18', 'Female', 'Pansexual', false, false, false, true, false, false, true, false, '2023-06-15', 1700, 770, 47000),
-    ('Mark', 'Chen', 'Green256', 33, 'mark.chen@yahoo.com', 'San Diego', 'CA', 92101, '1988-03-27', 'Male', 'Straight', true, true, true, true, true, true, true, true, '2023-07-01', 1950, 550, 55000),
-    ('Laura', 'Gonzalez', 'Green256', 26, 'laura.gonzalez@hotmail.com', 'Phoenix', 'AZ', 85001, '1995-10-05', 'Female', 'Straight', false, false, false, false, false, true, true, true, '2023-06-01', 2500, 750, 150000),
-    ('Kevin', 'Wilson', 'Green256', 38, 'kevin.wilson@gmail.com', 'Portland', 'OR', 97205, '1983-08-14', 'Male', 'Gay', true, true, true, true, false, true, false, false, '2023-06-01', 1850, 600, 65000),
-    ('Sara', 'Harris', 'Green256', 30, 'sara.harris@hotmail.com', 'Dallas', 'TX', 75201, '1991-12-22', 'Female', 'Bisexual', false, true, false, false, false, true, true, false, '2023-07-15', 1700, 750, 55000),
-    ('Steven', 'Jackson', 'Green256', 24, 'steven.jackson@yahoo.com', 'Las Vegas', 'NV', 89101, '1997-09-03', 'Male', 'Straight', true,  true, true, true, false, true, true, true, '2023-06-01', 2000, 590, 95000),
-    ('Catherine', 'Martin', 'Green256', 35, 'catherine.martin@gmail.com', 'Philadelphia', 'PA', 19103, '1986-05-18', 'Female', 'Lesbian', true, false, false, true, false, false, true, false, '2023-07-15', 2700, 670, 67000),
-    ('Alex', 'Lee', 'Green256', 21, 'alex.lee@hotmail.com', 'Minneapolis', 'MN', 55401, '2000-01-02', 'Non-binary', 'Queer', true, false, false, false, false, false, true, false, '2023-06-15', 1350, 750, 85000);
+    ('John', 'Doe', 'Green256', 'john.doe@gmail.com', 'New York City', 'NY', 10001, '1998-06-01', 'Male', 'Straight', true, false, false, false, false, true, true, true, '2023-06-01', 1500, 750, 50000),
+    ('Jane', 'Smith', 'Green256', 'jane.smith@hotmail.com', 'Los Angeles', 'CA', 90001, '1991-09-12', 'Female', 'Bisexual', false, true, true, true, false, true, false, false, '2023-06-01', 1800, 800, 60000),
+    ('Mike', 'Johnson', 'Green256', 'mike.johnson@yahoo.com', 'Chicago', 'IL', 60601, '1983-04-08', 'Male', 'Gay', true, false, false, true, false, false, true, false, '2023-06-15', 1200, 700, 40000),
+    ('Sarah', 'Lee', 'Green256', 'sarah.lee@gmail.com', 'Houston', 'TX', 77001, '1995-02-14', 'Female', 'Straight', true, false, true, false, false, true, false, true, '2023-06-01', 1300, 650, 45000),
+    ('Tom', 'Wang', 'Green256', 'tom.wang@hotmail.com', 'San Francisco', 'CA', 94102, '1998-08-23', 'Male', 'Bisexual', false, true, false, false, false, true, true, false, '2023-06-15', 1700, 750, 55000),
+    ('Emily', 'Davis', 'Green256', 'emily.davis@gmail.com', 'Miami', 'FL', 33101, '1990-12-03', 'Female', 'Lesbian', true, false, false, true, true, true, false, true, '2023-06-01', 1400, 700, 50000),
+    ('David', 'Nguyen', 'Green256', 'david.nguyen@yahoo.com', 'Seattle', 'WA', 98101, '1994-07-11', 'Non-Binary', 'Straight', true, true, true, false, false, false, true, false, '2023-06-15', 1600, 800, 65000),
+    ('Karen', 'Brown', 'Green256', 'karen.brown@gmail.com', 'Boston', 'MA', 02101, '1985-01-29', 'Female', 'Bisexual', true, true, true, true, true, true, true, true, '2023-06-01', 1900, 850, 75000),
+    ('Chris', 'Garcia', 'Green256', 'chris.garcia@hotmail.com', 'Austin', 'TX', 78701, '1999-05-09', 'Male', 'Straight', false, false, true, false, false, false, false, true, '2023-06-15', 2000, 725, 80000),
+    ('Lisa', 'Taylor', 'Green256', 'lisa.taylor@gmail.com', 'Denver', 'CO', 80202, '1992-11-18', 'Female', 'Pansexual', false, false, false, true, false, false, true, false, '2023-06-15', 1700, 770, 47000),
+    ('Mark', 'Chen', 'Green256', 'mark.chen@yahoo.com', 'San Diego', 'CA', 92101, '1988-03-27', 'Male', 'Straight', true, true, true, true, true, true, true, true, '2023-07-01', 1950, 550, 55000),
+    ('Laura', 'Gonzalez', 'Green256', 'laura.gonzalez@hotmail.com', 'Phoenix', 'AZ', 85001, '1995-10-05', 'Female', 'Straight', false, false, false, false, false, true, true, true, '2023-06-01', 2500, 750, 150000),
+    ('Kevin', 'Wilson', 'Green256', 'kevin.wilson@gmail.com', 'Portland', 'OR', 97205, '1983-08-14', 'Male', 'Gay', true, true, true, true, false, true, false, false, '2023-06-01', 1850, 600, 65000),
+    ('Sara', 'Harris', 'Green256', 'sara.harris@hotmail.com', 'Dallas', 'TX', 75201, '1991-12-22', 'Female', 'Bisexual', false, true, false, false, false, true, true, false, '2023-07-15', 1700, 750, 55000),
+    ('Steven', 'Jackson', 'Green256', 'steven.jackson@yahoo.com', 'Las Vegas', 'NV', 89101, '1997-09-03', 'Male', 'Straight', true,  true, true, true, false, true, true, true, '2023-06-01', 2000, 590, 95000),
+    ('Catherine', 'Martin', 'Green256', 'catherine.martin@gmail.com', 'Philadelphia', 'PA', 19103, '1986-05-18', 'Female', 'Lesbian', true, false, false, true, false, false, true, false, '2023-07-15', 2700, 670, 67000),
+    ('Alex', 'Lee', 'Green256', 'alex.lee@hotmail.com', 'Minneapolis', 'MN', 55401, '2000-01-02', 'Non-binary', 'Queer', true, false, false, false, false, false, true, false, '2023-06-15', 1350, 750, 85000);
 
 INSERT INTO answers (mate_id, gender_preference, pets_preference, sexual_orientation_preference, open_rooms_preference, neat_preference, kids_preference, low_noise_preference, smoker_preference, high_rise_preference, house_preference, private_bathroom_preference, private_room_preference, share_bills_preference, religious_preference, good_credit_preference, high_income_preference)
 VALUES
