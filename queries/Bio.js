@@ -25,7 +25,7 @@ const createBio = async (bio) => {
   try {
     const newBio = await db.one(
       'INSERT INTO bio (mate_id, small_bio) VALUES ($1, $2) RETURNING *',
-      [bio.mate_id, bio.Profile_Image],
+      [bio.mate_id, bio.small_bio],
     );
     return newBio;
   } catch (error) {

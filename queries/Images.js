@@ -27,8 +27,8 @@ const getImage = async (id) => {
 const createImage = async (image) => {
   try {
     const newImage = await db.one(
-      'INSERT INTO images (mate_id, Profile_Image) VALUES ($1, $2) RETURNING *',
-      [image.mate_id, image.Profile_Image],
+      'INSERT INTO images (mate_id, profile_image) VALUES ($1, $2) RETURNING *',
+      [image.mate_id, image.profile_image],
     );
     return newImage;
   } catch (error) {
@@ -53,8 +53,8 @@ const deleteImage = async (id) => {
 const updateImage = async (id, image) => {
   try {
     const updatedImage = await db.one(
-      'UPDATE images SET Profile_Image=$1 WHERE id=$2 RETURNING *',
-      [image.Profile_Image, id],
+      'UPDATE images SET profile_image=$1 WHERE id=$2 RETURNING *',
+      [image.profile_image, id],
     );
     return updatedImage;
   } catch (error) {

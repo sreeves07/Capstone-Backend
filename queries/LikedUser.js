@@ -28,7 +28,7 @@ const createLikedUser = async (likedUser) => {
   try {
     const newLike = await db.one(
       'INSERT INTO liked_user (mate_id, MateId_liked_user) VALUES ($1, $2) RETURNING *',
-      [likedUser.mate_id, likedUser.MateId_liked_user],
+      [likedUser.mate_id, likedUser.mateId_liked_user],
     );
     return newLike;
   } catch (error) {
@@ -53,8 +53,8 @@ const deleteLikedUser = async (id) => {
 const updateLikedUser = async (id, likedUser) => {
   try {
     const updatedLikedUser = await db.one(
-      'UPDATE liked_user SET MateId_liked_user=$1 WHERE id=$2 RETURNING *',
-      [likedUser.MateId_liked_user, id],
+      'UPDATE liked_user SET mateId_liked_user=$1 WHERE id=$2 RETURNING *',
+      [likedUser.mateId_liked_user, id],
     );
     return updatedLikedUser;
   } catch (error) {

@@ -10,10 +10,10 @@ CREATE TABLE mate (
     first_name VARCHAR(40),
     last_name VARCHAR(40),
     password VARCHAR(40),
-    age INT,
     email VARCHAR(60), 
     city VARCHAR(40),
     state VARCHAR(40),
+    zip_code INT,
     birthday DATE,
     gender VARCHAR(20),
     sexual_orientation VARCHAR(50),
@@ -35,22 +35,22 @@ DROP TABLE IF EXISTS answers;
 
 CREATE TABLE answers ( 
     id SERIAL PRIMARY KEY,
-    Gender_Preference VARCHAR(20),
-    Pets_Preference BOOLEAN,
-    Sexual_Orientation_Preference TEXT,
-    Open_Rooms_Preference BOOLEAN,
-    Neat_Preference BOOLEAN,
-    Kids_Preference BOOLEAN,
-    Low_Noise_Preference BOOLEAN,
-    Smoker_Preference BOOLEAN,
-    High_Rise_Preference BOOLEAN,
-    House_Preference BOOLEAN,
-    Private_Bathroom_Preference BOOLEAN,
-    Private_Room_Preference BOOLEAN,
-    Share_Bills_Preference BOOLEAN,
-    Religious_Preference BOOLEAN,
-    Good_Credit_Preference BOOLEAN,
-    High_Income_Preference BOOLEAN,
+    gender_preference VARCHAR(20),
+    pets_preference BOOLEAN,
+    sexual_orientation_preference TEXT,
+    open_rooms_preference BOOLEAN,
+    neat_preference BOOLEAN,
+    kids_preference BOOLEAN,
+    low_noise_preference BOOLEAN,
+    smoker_preference BOOLEAN,
+    high_rise_preference BOOLEAN,
+    house_preference BOOLEAN,
+    private_bathroom_preference BOOLEAN,
+    private_room_preference BOOLEAN,
+    share_bills_preference BOOLEAN,
+    religious_preference BOOLEAN,
+    good_credit_preference BOOLEAN,
+    high_income_preference BOOLEAN,
     mate_id INTEGER REFERENCES mate (id)
     ON DELETE CASCADE
 );
@@ -59,7 +59,7 @@ DROP TABLE IF EXISTS images;
     
 CREATE TABLE images (
     id SERIAL PRIMARY KEY,
-    Profile_Image TEXT,
+    profile_image TEXT,
     mate_id INTEGER REFERENCES mate (id)
     ON DELETE CASCADE
 );
@@ -77,7 +77,7 @@ DROP TABLE IF EXISTS liked_user;
 
 CREATE TABLE liked_user (
     id SERIAL PRIMARY KEY,
-    MateId_liked_user INT,
+    mateId_liked_user INT,
     mate_id INTEGER REFERENCES mate (id)
     ON DELETE CASCADE
 );
