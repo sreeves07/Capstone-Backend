@@ -9,7 +9,6 @@ CREATE TABLE mate (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(40),
     last_name VARCHAR(40),
-    password VARCHAR(40),
     email VARCHAR(60), 
     city VARCHAR(40),
     state VARCHAR(40),
@@ -28,7 +27,8 @@ CREATE TABLE mate (
     move_in_date DATE,
     max_rent INT,
     credit_score INT,
-    income INT
+    income INT,
+    uid VARCHAR(40)
 );
 
 DROP TABLE IF EXISTS answers;

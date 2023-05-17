@@ -24,11 +24,10 @@ const getUser = async (id) => {
 const createUser = async (user) => {
   try {
     const newUser = await db.one(
-      'INSERT INTO mate (first_name, last_name, password, email, city, state, zip_code, birthday, gender, sexual_orientation, has_pets, has_open_rooms, is_smoker, has_kids, is_disabled, is_sharing_bills, is_neat, is_religious, move_in_date, max_rent, credit_score, income) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22) RETURNING *',
+      'INSERT INTO mate (first_name, last_name, email, city, state, zip_code, birthday, gender, sexual_orientation, has_pets, has_open_rooms, is_smoker, has_kids, is_disabled, is_sharing_bills, is_neat, is_religious, move_in_date, max_rent, credit_score, income, uid) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22) RETURNING *',
       [
         user.first_name,
         user.last_name,
-        user.password,
         user.email,
         user.city,
         user.state,
@@ -48,6 +47,7 @@ const createUser = async (user) => {
         user.max_rent,
         user.credit_score,
         user.income,
+        user.uid,
       ],
     );
     return newUser;
@@ -73,11 +73,10 @@ const deleteUser = async (id) => {
 const updateUser = async (id, user) => {
   try {
     const updatedUser = await db.one(
-      'UPDATE mate SET first_name=$1, last_name=$2, password=$3, email=$4, city=$5, state=$6, zip_code=$7, birthday=$8, gender=$9, sexual_orientation=$10, has_pets=$11, has_open_rooms=$12, is_smoker=$13, has_kids=$14, is_disabled=$15, is_sharing_bills=$16, is_neat=$17, is_religious=$18, move_in_date=$19, max_rent=$20, credit_score=$21, income=$22 WHERE id=$23 RETURNING *',
+      'UPDATE mate SET first_name=$1, last_name=$2, email=$3, city=$4, state=$5, zip_code=$6, birthday=$7, gender=$8, sexual_orientation=$9, has_pets=$10, has_open_rooms=$11, is_smoker=$12, has_kids=$13, is_disabled=$14, is_sharing_bills=$15, is_neat=$16, is_religious=$17, move_in_date=$18, max_rent=$19, credit_score=$20, income=$21, uid=$22 WHERE id=$23 RETURNING *',
       [
         user.first_name,
         user.last_name,
-        user.password,
         user.email,
         user.city,
         user.state,
@@ -97,6 +96,7 @@ const updateUser = async (id, user) => {
         user.max_rent,
         user.credit_score,
         user.income,
+        user.uid,
         id,
       ],
     );
