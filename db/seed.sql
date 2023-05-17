@@ -41,12 +41,12 @@ VALUES
     ('17', 'Male', false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true);
 
 INSERT INTO images (mate_id, profile_image) VALUES 
-    ('1', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683733932/michael-dam-mEZ3PoFGs_k-unsplash_xnw5af.jpg'),
-    ('2', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735294/Bestmates/joseph-gonzalez-iFgRcqHznqg-unsplash_yreuvt.jpg'),
-    ('3', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735438/Bestmates/christopher-campbell-rDEOVtE7vOs-unsplash_ywjdln.jpg'),
-    ('4', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735471/Bestmates/ben-den-engelsen-YUu9UAcOKZ4-unsplash_ijpazy.jpg'),
+    ('1', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735294/Bestmates/joseph-gonzalez-iFgRcqHznqg-unsplash_yreuvt.jpg'),
+    ('2', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683733932/michael-dam-mEZ3PoFGs_k-unsplash_xnw5af.jpg'),
+    ('3', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735471/Bestmates/ben-den-engelsen-YUu9UAcOKZ4-unsplash_ijpazy.jpg'),
+    ('4', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735438/Bestmates/christopher-campbell-rDEOVtE7vOs-unsplash_ywjdln.jpg'),
     ('5', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735510/Bestmates/jurica-koletic-7YVZYZeITc8-unsplash_fad6f1.jpg'),
-    ('6', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735651/Bestmates/luis-villasmil-hh3ViD0r0Rc-unsplash_ovi7yl.jpg'),
+    ('6', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1684342198/romina-farias-BsZ71j4i_m4-unsplash_hjl3tf.jpg'),
     ('7', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735673/Bestmates/ayo-ogunseinde-sibVwORYqs0-unsplash_pon8j4.jpg'),
     ('8', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735695/Bestmates/matheus-ferrero-W7b3eDUb_2I-unsplash_ydpu05.jpg'),
     ('9', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735721/Bestmates/podpros-GEnCnYhA1J4-unsplash_xg0mox.jpg'),
@@ -54,7 +54,7 @@ INSERT INTO images (mate_id, profile_image) VALUES
     ('11', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735782/Bestmates/eric-weber-nQOQVJW7EY8-unsplash_s0fvgk.jpg'),
     ('12', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735797/Bestmates/zoe-fernandez--zqoE7jnQgw-unsplash_pmkn0u.jpg'),
     ('13', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735807/Bestmates/brooks-leibee-27QcqVqgVg4-unsplash_essapq.jpg'),
-    ('14', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735858/Bestmates/charlesdeluvio-kVg2DQTAK7c-unsplash_jzrekh.jpg'),
+    ('14', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1684342191/mustafa-omar-RGtSTDmmcCk-unsplash_p7vjer.jpg'),
     ('15', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735872/Bestmates/leio-mclaren-L2dTmhQzx4Q-unsplash_xaz618.jpg'),
     ('16', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735884/Bestmates/princess-4glIyBjf2Gk-unsplash_m0evxo.jpg'),
     ('17', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735900/Bestmates/ethan-rougon-uZBCgRDKsko-unsplash_ms20ee.jpg');
