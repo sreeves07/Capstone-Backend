@@ -2,23 +2,23 @@
 
 INSERT INTO mate (first_name, last_name, email, city, state, zip_code, birthday, gender, sexual_orientation, has_pets, has_open_rooms, is_smoker, has_kids, is_disabled, is_sharing_bills, is_neat, is_religious, move_in_date, max_rent, credit_score, income, uid)
 VALUES 
-    ('John', 'Doe', 'john.doe@gmail.com', 'New York City', 'NY', 10001, '1998-06-01', 'Male', 'Straight', true, false, false, false, false, true, true, true, '2023-06-01', 1500, 750, 50000),
-    ('Jane', 'Smith', 'jane.smith@hotmail.com', 'Los Angeles', 'CA', 90001, '1991-09-12', 'Female', 'Bisexual', false, true, true, true, false, true, false, false, '2023-06-01', 1800, 800, 60000),
-    ('Mike', 'Johnson', 'mike.johnson@yahoo.com', 'Chicago', 'IL', 60601, '1983-04-08', 'Male', 'Gay', true, false, false, true, false, false, true, false, '2023-06-15', 1200, 700, 40000),
-    ('Sarah', 'Lee', 'sarah.lee@gmail.com', 'Houston', 'TX', 77001, '1995-02-14', 'Female', 'Straight', true, false, true, false, false, true, false, true, '2023-06-01', 1300, 650, 45000),
-    ('Tom', 'Wang', 'tom.wang@hotmail.com', 'San Francisco', 'CA', 94102, '1998-08-23', 'Male', 'Bisexual', false, true, false, false, false, true, true, false, '2023-06-15', 1700, 750, 55000),
-    ('Emily', 'Davis', 'emily.davis@gmail.com', 'Miami', 'FL', 33101, '1990-12-03', 'Female', 'Lesbian', true, false, false, true, true, true, false, true, '2023-06-01', 1400, 700, 50000),
-    ('David', 'Nguyen', 'david.nguyen@yahoo.com', 'Seattle', 'WA', 98101, '1994-07-11', 'Non-Binary', 'Straight', true, true, true, false, false, false, true, false, '2023-06-15', 1600, 800, 65000),
-    ('Karen', 'Brown', 'karen.brown@gmail.com', 'Boston', 'MA', 02101, '1985-01-29', 'Female', 'Bisexual', true, true, true, true, true, true, true, true, '2023-06-01', 1900, 850, 75000),
-    ('Chris', 'Garcia', 'chris.garcia@hotmail.com', 'Austin', 'TX', 78701, '1999-05-09', 'Male', 'Straight', false, false, true, false, false, false, false, true, '2023-06-15', 2000, 725, 80000),
-    ('Lisa', 'Taylor', 'lisa.taylor@gmail.com', 'Denver', 'CO', 80202, '1992-11-18', 'Female', 'Pansexual', false, false, false, true, false, false, true, false, '2023-06-15', 1700, 770, 47000),
-    ('Mark', 'Chen', 'mark.chen@yahoo.com', 'San Diego', 'CA', 92101, '1988-03-27', 'Male', 'Straight', true, true, true, true, true, true, true, true, '2023-07-01', 1950, 550, 55000),
-    ('Laura', 'Gonzalez', 'laura.gonzalez@hotmail.com', 'Phoenix', 'AZ', 85001, '1995-10-05', 'Female', 'Straight', false, false, false, false, false, true, true, true, '2023-06-01', 2500, 750, 150000),
-    ('Kevin', 'Wilson', 'kevin.wilson@gmail.com', 'Portland', 'OR', 97205, '1983-08-14', 'Male', 'Gay', true, true, true, true, false, true, false, false, '2023-06-01', 1850, 600, 65000),
-    ('Sara', 'Harris', 'sara.harris@hotmail.com', 'Dallas', 'TX', 75201, '1991-12-22', 'Female', 'Bisexual', false, true, false, false, false, true, true, false, '2023-07-15', 1700, 750, 55000),
-    ('Steven', 'Jackson', 'steven.jackson@yahoo.com', 'Las Vegas', 'NV', 89101, '1997-09-03', 'Male', 'Straight', true,  true, true, true, false, true, true, true, '2023-06-01', 2000, 590, 95000),
-    ('Catherine', 'Martin', 'catherine.martin@gmail.com', 'Philadelphia', 'PA', 19103, '1986-05-18', 'Female', 'Lesbian', true, false, false, true, false, false, true, false, '2023-07-15', 2700, 670, 67000),
-    ('Alex', 'Lee', 'alex.lee@hotmail.com', 'Minneapolis', 'MN', 55401, '2000-01-02', 'Non-binary', 'Queer', true, false, false, false, false, false, true, false, '2023-06-15', 1350, 750, 85000);
+    ('John', 'Doe', 'john.doe@gmail.com', 'New York City', 'NY', 10001, '1998-06-01', 'Male', 'Straight', true, false, false, false, false, true, true, true, '2023-06-01', 1500, 750, 50000, 'nonRe@l!d12345'),
+    ('Jane', 'Smith', 'jane.smith@hotmail.com', 'Los Angeles', 'CA', 90001, '1991-09-12', 'Female', 'Bisexual', false, true, true, true, false, true, false, false, '2023-06-01', 1800, 800, 60000, 'nonRe@l!d12345'),
+    ('Mike', 'Johnson', 'mike.johnson@yahoo.com', 'Chicago', 'IL', 60601, '1983-04-08', 'Male', 'Gay', true, false, false, true, false, false, true, false, '2023-06-15', 1200, 700, 40000, 'nonRe@l!d12345'),
+    ('Sarah', 'Lee', 'sarah.lee@gmail.com', 'Houston', 'TX', 77001, '1995-02-14', 'Female', 'Straight', true, false, true, false, false, true, false, true, '2023-06-01', 1300, 650, 45000, 'nonRe@l!d12345'),
+    ('Tom', 'Wang', 'tom.wang@hotmail.com', 'San Francisco', 'CA', 94102, '1998-08-23', 'Male', 'Bisexual', false, true, false, false, false, true, true, false, '2023-06-15', 1700, 750, 55000, 'nonRe@l!d12345'),
+    ('Emily', 'Davis', 'emily.davis@gmail.com', 'Miami', 'FL', 33101, '1990-12-03', 'Female', 'Lesbian', true, false, false, true, true, true, false, true, '2023-06-01', 1400, 700, 50000, 'nonRe@l!d12345'),
+    ('David', 'Nguyen', 'david.nguyen@yahoo.com', 'Seattle', 'WA', 98101, '1994-07-11', 'Non-Binary', 'Straight', true, true, true, false, false, false, true, false, '2023-06-15', 1600, 800, 65000, 'nonRe@l!d12345'),
+    ('Karen', 'Brown', 'karen.brown@gmail.com', 'Boston', 'MA', 02101, '1985-01-29', 'Female', 'Bisexual', true, true, true, true, true, true, true, true, '2023-06-01', 1900, 850, 75000, 'nonRe@l!d12345'),
+    ('Chris', 'Garcia', 'chris.garcia@hotmail.com', 'Austin', 'TX', 78701, '1999-05-09', 'Male', 'Straight', false, false, true, false, false, false, false, true, '2023-06-15', 2000, 725, 80000, 'nonRe@l!d12345'),
+    ('Lisa', 'Taylor', 'lisa.taylor@gmail.com', 'Denver', 'CO', 80202, '1992-11-18', 'Female', 'Pansexual', false, false, false, true, false, false, true, false, '2023-06-15', 1700, 770, 47000, 'nonRe@l!d12345'),
+    ('Mark', 'Chen', 'mark.chen@yahoo.com', 'San Diego', 'CA', 92101, '1988-03-27', 'Male', 'Straight', true, true, true, true, true, true, true, true, '2023-07-01', 1950, 550, 55000, 'nonRe@l!d12345'),
+    ('Laura', 'Gonzalez', 'laura.gonzalez@hotmail.com', 'Phoenix', 'AZ', 85001, '1995-10-05', 'Female', 'Straight', false, false, false, false, false, true, true, true, '2023-06-01', 2500, 750, 150000, 'nonRe@l!d12345'),
+    ('Kevin', 'Wilson', 'kevin.wilson@gmail.com', 'Portland', 'OR', 97205, '1983-08-14', 'Male', 'Gay', true, true, true, true, false, true, false, false, '2023-06-01', 1850, 600, 65000, 'nonRe@l!d12345'),
+    ('Sara', 'Harris', 'sara.harris@hotmail.com', 'Dallas', 'TX', 75201, '1991-12-22', 'Female', 'Bisexual', false, true, false, false, false, true, true, false, '2023-07-15', 1700, 750, 55000, 'nonRe@l!d12345'),
+    ('Steven', 'Jackson', 'steven.jackson@yahoo.com', 'Las Vegas', 'NV', 89101, '1997-09-03', 'Male', 'Straight', true,  true, true, true, false, true, true, true, '2023-06-01', 2000, 590, 95000, 'nonRe@l!d12345'),
+    ('Catherine', 'Martin', 'catherine.martin@gmail.com', 'Philadelphia', 'PA', 19103, '1986-05-18', 'Female', 'Lesbian', true, false, false, true, false, false, true, false, '2023-07-15', 2700, 670, 67000, 'nonRe@l!d12345'),
+    ('Alex', 'Lee', 'alex.lee@hotmail.com', 'Minneapolis', 'MN', 55401, '2000-01-02', 'Non-binary', 'Queer', true, false, false, false, false, false, true, false, '2023-06-15', 1350, 750, 85000, 'nonRe@l!d12345');
 
 INSERT INTO answers (mate_id, gender_preference, pets_preference, sexual_orientation_preference, open_rooms_preference, neat_preference, kids_preference, low_noise_preference, smoker_preference, high_rise_preference, house_preference, private_bathroom_preference, private_room_preference, share_bills_preference, religious_preference, good_credit_preference, high_income_preference)
 VALUES
