@@ -7,6 +7,7 @@ const {
   createUser,
   updateUser,
   deleteUser,
+  registerUser,
 } = require('../queries/User');
 const answersController = require('./AnswerController');
 const imageController = require('./ImageController');
@@ -47,6 +48,16 @@ user.post('/', async (req, res) => {
     res.status(404).json({ error: 'User was not created' });
   }
 });
+
+//Register
+user.post('/register', async (req, res) => {
+  try {
+    const register = await registerUser(req.body)
+    res.status(200).json(register)
+  } catch (error) {
+    res.status(404).json({error: 'User was not registered'})
+  }
+})
 
 //Delete
 user.delete('/:id', async (req, res) => {

@@ -56,6 +56,18 @@ const createUser = async (user) => {
   }
 };
 
+//Register User
+const registerUser= async (auth) => {
+  try {
+    const newRegister = await db.one('INSERT INTO mate (uid, email) VALUES ($1, $2) RETURNING *',
+    [auth.uid, auth.email]
+    );
+    return newRegister
+  } catch (error) {
+    return error
+  }
+}
+
 //Delete
 const deleteUser = async (id) => {
   try {
@@ -106,4 +118,4 @@ const updateUser = async (id, user) => {
   }
 };
 
-module.exports = { getAllUser, getUser, createUser, updateUser, deleteUser };
+module.exports = { getAllUser, getUser, createUser, updateUser, deleteUser, registerUser };
