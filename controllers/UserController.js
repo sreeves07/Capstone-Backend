@@ -40,9 +40,10 @@ user.get('/:id', async (req, res) => {
 });
 
 //Create
-user.post('/', async (req, res) => {
+user.put('/:uid', async (req, res) => {
   try {
-    const user = await createUser(req.body);
+    const { uid } = req.params;
+    const user = await createUser(uid, req.body);
     res.status(200).json(user);
   } catch (error) {
     res.status(404).json({ error: 'User was not created' });
