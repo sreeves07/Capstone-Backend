@@ -28,6 +28,8 @@ CREATE TABLE mate (
     max_rent INT,
     credit_score INT,
     income INT,
+    profile_image TEXT,
+    small_bio VARCHAR(100),
     uid VARCHAR(40)
 );
 
@@ -55,28 +57,12 @@ CREATE TABLE answers (
     ON DELETE CASCADE
 );
     
-DROP TABLE IF EXISTS images;
-    
-CREATE TABLE images (
-    id SERIAL PRIMARY KEY,
-    profile_image TEXT,
-    mate_id INTEGER REFERENCES mate (id)
-    ON DELETE CASCADE
-);
-
-DROP TABLE IF EXISTS bio;
-
-CREATE TABLE bio (
-    id SERIAL PRIMARY KEY,
-    small_bio VARCHAR(70),
-    mate_id INTEGER REFERENCES mate (id)
-    ON DELETE CASCADE
-);
 
 DROP TABLE IF EXISTS liked_user;
 
 CREATE TABLE liked_user (
     id SERIAL PRIMARY KEY,
+    uid VARCHAR(40)
     mateId_liked_user INT,
     mate_id INTEGER REFERENCES mate (id)
     ON DELETE CASCADE
