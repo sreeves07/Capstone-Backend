@@ -11,8 +11,6 @@ const {
   registerUser,
 } = require('../queries/User');
 const answersController = require('./AnswerController');
-const imageController = require('./ImageController');
-const bioController = require('./BioController');
 const likedUserController = require('./LikedUserController');
 
 user.use('/:mateId/answers', answersController);

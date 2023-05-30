@@ -62,8 +62,8 @@ DROP TABLE IF EXISTS liked_user;
 
 CREATE TABLE liked_user (
     id SERIAL PRIMARY KEY,
-    uid VARCHAR(40)
-    mateId_liked_user INT,
+    uid VARCHAR(40),
+    mateId_liked_user VARCHAR(50),
     mate_id INTEGER REFERENCES mate (id)
     ON DELETE CASCADE
 );
