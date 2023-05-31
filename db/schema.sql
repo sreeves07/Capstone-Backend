@@ -6,7 +6,8 @@ CREATE DATABASE bestmates_app;
 DROP TABLE IF EXISTS bestmates_app;
 
 CREATE TABLE mate (
-    id SERIAL PRIMARY KEY,
+    id SERIAL,
+    uid VARCHAR(40) PRIMARY KEY,
     first_name VARCHAR(40),
     last_name VARCHAR(40),
     email VARCHAR(60), 
@@ -29,14 +30,14 @@ CREATE TABLE mate (
     credit_score INT,
     income INT,
     profile_image TEXT,
-    small_bio VARCHAR(100),
-    uid VARCHAR(40)
+    small_bio VARCHAR(100)
 );
 
 DROP TABLE IF EXISTS answers;
 
 CREATE TABLE answers ( 
     id SERIAL PRIMARY KEY,
+    mate_uid VARCHAR(40),
     gender_preference VARCHAR(20),
     pets_preference BOOLEAN,
     sexual_orientation_preference TEXT,
@@ -53,17 +54,24 @@ CREATE TABLE answers (
     religious_preference BOOLEAN,
     good_credit_preference BOOLEAN,
     high_income_preference BOOLEAN,
-    mate_id INTEGER REFERENCES mate (id)
+    CONSTRAINT fk0_mate
+      FOREIGN KEY(mate_uid) 
+	    REFERENCES mate(uid)
     ON DELETE CASCADE
 );
     
 
-DROP TABLE IF EXISTS liked_user;
+DROP TABLE IF EXISTS liked_users;
 
 CREATE TABLE liked_user (
     id SERIAL PRIMARY KEY,
-    uid VARCHAR(40),
-    mateId_liked_user VARCHAR(50),
-    mate_id INTEGER REFERENCES mate (id)
+    mate_uid VARCHAR(40),
+    liked_mate_uid VARCHAR(40),
+    CONSTRAINT fk1_mate
+      FOREIGN KEY(mate_uid) 
+	    REFERENCES mate(uid),
+    CONSTRAINT fk2_mate
+      FOREIGN KEY(liked_mate_uid) 
+	    REFERENCES mate(uid)
     ON DELETE CASCADE
 );

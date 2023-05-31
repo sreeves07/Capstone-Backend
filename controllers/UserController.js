@@ -27,9 +27,9 @@ user.get('/', async (req, res) => {
 });
 
 //Show
-user.get('/:id', async (req, res) => {
-  const { id } = req.params;
-  const user = await getUser(id);
+user.get('/:uid', async (req, res) => {
+  const { uid } = req.params;
+  const user = await getUser(uid);
   if (user[0]) {
     res.status(200).json(user);
   } else {
@@ -38,7 +38,7 @@ user.get('/:id', async (req, res) => {
 });
 
 //Create
-user.put('/:id', async (req, res) => {
+user.put('/:uid', async (req, res) => {
   try {
     const { uid } = req.params;
     const user = await createUser(uid, req.body);
@@ -81,15 +81,15 @@ user.put('/register/:id', async (req, res) => {
 });
 
 //Update
-user.put('/:id', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const updatedUser = await updateUser(id, req.body);
-    res.status(200).json(updatedUser);
-  } catch (error) {
-    res.status(404).json({ error: 'Failed to update user' });
-  }
-});
+// user.put('/:id', async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const updatedUser = await updateUser(id, req.body);
+//     res.status(200).json(updatedUser);
+//   } catch (error) {
+//     res.status(404).json({ error: 'Failed to update user' });
+//   }
+// });
 
 //Export
 module.exports = user;

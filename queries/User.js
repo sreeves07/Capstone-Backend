@@ -11,9 +11,9 @@ const getAllUser = async () => {
 };
 
 //Show
-const getUser = async (id) => {
+const getUser = async (uid) => {
   try {
-    const oneUser = await db.any('SELECT * FROM mate WHERE id = $1', id);
+    const oneUser = await db.any('SELECT * FROM mate WHERE uid = $1', uid);
     return oneUser;
   } catch (error) {
     return { error: 'ID NOT FOUND' };
