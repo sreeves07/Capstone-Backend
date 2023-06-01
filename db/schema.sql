@@ -40,7 +40,7 @@ CREATE TABLE answers (
     mate_uid VARCHAR(40),
     gender_preference VARCHAR(20),
     pets_preference BOOLEAN,
-    sexual_orientation_preference TEXT,
+    sexual_orientation_preference VARCHAR(20),
     open_rooms_preference BOOLEAN,
     neat_preference BOOLEAN,
     kids_preference BOOLEAN,

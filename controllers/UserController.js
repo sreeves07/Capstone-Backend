@@ -13,8 +13,8 @@ const {
 const answersController = require('./AnswerController');
 const likedUserController = require('./LikedUserController');
 
-user.use('/:mateId/answers', answersController);
-user.use('/:mateId/likes', likedUserController);
+user.use('/:uid/answers', answersController);
+user.use('/:uid/likes', likedUserController);
 
 //Index
 user.get('/', async (req, res) => {

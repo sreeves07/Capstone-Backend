@@ -11,9 +11,9 @@ const {
 
 //Index
 answer.get('/', async (req, res) => {
-  const { mateId } = req.params;
+  const { uid } = req.params;
   try {
-    const allAnswers = await getAllAnswers(mateId);
+    const allAnswers = await getAllAnswers(uid);
     res.status(200).json(allAnswers);
   } catch (error) {
     res.status(200).json({ error: 'server error' });
@@ -53,10 +53,10 @@ answer.delete('/:id', async (req, res) => {
 });
 
 //Update
-answer.put('/:id', async (req, res) => {
+answer.put('/', async (req, res) => {
   try {
-    const { id } = req.params;
-    const updatedAnswer = await updateAnswer(id, req.body);
+    const { uid } = req.params;
+    const updatedAnswer = await updateAnswer(uid, req.body);
     res.status(200).json(updatedAnswer);
   } catch (error) {
     res.status(404).json({ error: 'Failed to update answers' });

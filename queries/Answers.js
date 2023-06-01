@@ -1,11 +1,11 @@
 const db = require('../db/Confiq');
 
 //Index
-const getAllAnswers = async (mate_id) => {
+const getAllAnswers = async (uid) => {
   try {
     const allAnswer = await db.any(
-      'SELECT * FROM answers WHERE mate_id=$1',
-      mate_id,
+      'SELECT * FROM answers WHERE mate_uid=$1',
+      uid,
     );
     return allAnswer;
   } catch (error) {
@@ -27,9 +27,9 @@ const getAnswer = async (id) => {
 const createAnswer = async (answer) => {
   try {
     const newUser = await db.one(
-      'INSERT INTO answers (mate_id, gender_preference, pets_preference, sexual_orientation_preference, open_rooms_preference, neat_preference, kids_preference, low_noise_preference, smoker_preference, high_rise_preference, house_preference, private_bathroom_preference, private_room_preference, share_bills_preference, religious_preference, good_credit_preference, high_income_preference) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17) RETURNING *',
+      'INSERT INTO answers (mate_uid, gender_preference, pets_preference, sexual_orientation_preference, open_rooms_preference, neat_preference, kids_preference, low_noise_preference, smoker_preference, high_rise_preference, house_preference, private_bathroom_preference, private_room_preference, share_bills_preference, religious_preference, good_credit_preference, high_income_preference) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17) RETURNING *',
       [
-        answer.mate_id,
+        answer.mate_uid,
         answer.gender_preference,
         answer.pets_preference,
         answer.sexual_orientation_preference,
@@ -68,10 +68,10 @@ const deleteAnswer = async (id) => {
 };
 
 //Update
-const updateAnswer = async (id, answer) => {
+const updateAnswer = async (uid, answer) => {
   try {
     const updatedAnswer = await db.one(
-      'UPDATE answers SET gender_preference=$1, pets_preference=$2, sexual_orientation_preference=$3, open_rooms_preference=$4, neat_preference=$5, kids_preference=$6, low_noise_preference=$7, smoker_preference=$8, high_rise_preference=$9, house_preference=$10, private_bathroom_preference=$11, private_room_preference=$12, share_bills_preference=$13, religious_preference=$14, good_credit_preference=$15, high_income_preference=$16 WHERE id=$17 RETURNING *',
+      'UPDATE answers SET gender_preference=$1, pets_preference=$2, sexual_orientation_preference=$3, open_rooms_preference=$4, neat_preference=$5, kids_preference=$6, low_noise_preference=$7, smoker_preference=$8, high_rise_preference=$9, house_preference=$10, private_bathroom_preference=$11, private_room_preference=$12, share_bills_preference=$13, religious_preference=$14, good_credit_preference=$15, high_income_preference=$16 WHERE mate_uid=$17, RETURNING *',
       [
         answer.gender_preference,
         answer.pets_preference,
@@ -89,7 +89,7 @@ const updateAnswer = async (id, answer) => {
         answer.religious_preference,
         answer.good_credit_preference,
         answer.high_income_preference,
-        id,
+        uid,
       ],
     );
     return updatedAnswer;
