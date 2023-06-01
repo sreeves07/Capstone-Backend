@@ -71,7 +71,7 @@ const deleteAnswer = async (id) => {
 const updateAnswer = async (uid, answer) => {
   try {
     const updatedAnswer = await db.one(
-      'UPDATE answers SET gender_preference=$1, pets_preference=$2, sexual_orientation_preference=$3, open_rooms_preference=$4, neat_preference=$5, kids_preference=$6, low_noise_preference=$7, smoker_preference=$8, high_rise_preference=$9, house_preference=$10, private_bathroom_preference=$11, private_room_preference=$12, share_bills_preference=$13, religious_preference=$14, good_credit_preference=$15, high_income_preference=$16 WHERE mate_uid=$17, RETURNING *',
+      'UPDATE answers SET gender_preference=$1, pets_preference=$2, sexual_orientation_preference=$3, open_rooms_preference=$4, neat_preference=$5, kids_preference=$6, low_noise_preference=$7, smoker_preference=$8, high_rise_preference=$9, house_preference=$10, private_bathroom_preference=$11, private_room_preference=$12, share_bills_preference=$13, religious_preference=$14, good_credit_preference=$15, high_income_preference=$16 WHERE mate_uid=$17 RETURNING *',
       [
         answer.gender_preference,
         answer.pets_preference,
