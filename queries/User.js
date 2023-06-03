@@ -69,6 +69,19 @@ const registerUser= async (auth) => {
   }
 }
 
+//Alter
+const alterUser = async (uid, { small_bio }) => {
+  try {
+    const alteredUser = await db.one(
+      'UPDATE mate SET small_bio=$1 WHERE uid=$2 RETURNING *',
+    [ small_bio, uid ],
+    );
+    return alteredUser;
+  } catch (error) {
+    return error
+  }
+}
+
 //Delete
 const deleteUser = async (id) => {
   try {
@@ -158,4 +171,4 @@ const updateUser = async (id, user) => {
   }
 };
 
-module.exports = { getAllUser, getUser, createUser, updateUser, deleteUser, registerUser, updateRegisteredUser };
+module.exports = { getAllUser, getUser, createUser, alterUser, updateUser, deleteUser, registerUser, updateRegisteredUser };
