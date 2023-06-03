@@ -5,6 +5,7 @@ const {
   getAllUser,
   getUser,
   createUser,
+  alterUser,
   updateUser,
   deleteUser,
   updateRegisteredUser,
@@ -47,6 +48,17 @@ user.put('/:uid', async (req, res) => {
     res.status(404).json({ error: 'User was not created' });
   }
 });
+
+//Alter Prop
+user.patch('/:uid', async (req, res) => {
+  try {
+    const { uid } = req/params;
+    const alteredUser = await alterUser(uid, req.body);
+    res.status(200).json(alteredUser);
+  } catch (error) {
+    res.status(400).json({error: 'User was not altered'})
+  }
+})
 
 //Register
 user.post('/register', async (req, res) => {
