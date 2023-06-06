@@ -69,19 +69,6 @@ const registerUser= async (auth) => {
   }
 }
 
-//Alter
-const alterUser = async (uid, { small_bio }) => {
-  try {
-    const alteredUser = await db.one(
-      'UPDATE mate SET small_bio=$1 WHERE uid=$2 RETURNING *',
-    [ small_bio, uid ],
-    );
-    return alteredUser;
-  } catch (error) {
-    return error
-  }
-}
-
 //Delete
 const deleteUser = async (id) => {
   try {
@@ -171,16 +158,41 @@ const updateUser = async (id, user) => {
   }
 };
 
-<<<<<<< HEAD
-module.exports = { getAllUser, getUser, createUser, alterUser, updateUser, deleteUser, registerUser, updateRegisteredUser };
-=======
-const getPreferred = async () => {
-  try {
-    const allUserPreferences = await db.any('SELECT * FROM mate WHERE ')
-  } catch (error) {
-    return error
-  }
-}
+//
+// gender_preference VARCHAR(20),
+// pets_preference BOOLEAN,
+// sexual_orientation_preference VARCHAR(20),
+// open_rooms_preference BOOLEAN,
+// neat_preference BOOLEAN,
+// kids_preference BOOLEAN,
+// low_noise_preference BOOLEAN,
+// smoker_preference BOOLEAN,
+// high_rise_preference BOOLEAN,
+// house_preference BOOLEAN,
+// private_bathroom_preference BOOLEAN,
+// private_room_preference BOOLEAN,
+// share_bills_preference BOOLEAN,
+// religious_preference BOOLEAN,
+// good_credit_preference BOOLEAN,
+// high_income_preference BOOLEAN,
+// const filterMap = {
+//   'Has Good Credit': 'good_credit_preference',
+
+// }
+
+// //
+// const getPreferencesArray = (preferences) => {
+//   preferences.forEach((elem) =>  filterMap[elem])
+// }
+
+// //
+
+// const getPreferred = async (preferenceArray) => {
+//   try {
+//     const allUserPreferences = await db.any('SELECT * FROM answers WHERE preferences = true')
+//   } catch (error) {
+//     return error
+//   }
+// }
 
 module.exports = { getAllUser, getUser, createUser, updateUser, deleteUser, registerUser, updateRegisteredUser };
->>>>>>> 879113a (bio and image table added, seeded, routes done)
