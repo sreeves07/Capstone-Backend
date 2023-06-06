@@ -75,3 +75,27 @@ CREATE TABLE liked_user (
 	    REFERENCES mate(uid)
     ON DELETE CASCADE
 );
+
+DROP TABLE IF EXISTS images;
+
+CREATE TABLE images (
+    id SERIAL PRIMARY KEY,
+    mate_uid VARCHAR(40),
+    profile_image TEXT,
+    CONSTRAINT fk3_mate
+      FOREIGN KEY(mate_uid) 
+	    REFERENCES mate(uid)
+    ON DELETE CASCADE
+);
+
+DROP TABLE IF EXISTS bio;
+
+CREATE TABLE bio (
+    id SERIAL PRIMARY KEY,
+    mate_uid VARCHAR(40),
+    small_bio VARCHAR(70),
+    CONSTRAINT fk4_mate
+      FOREIGN KEY(mate_uid) 
+	    REFERENCES mate(uid)
+    ON DELETE CASCADE
+)

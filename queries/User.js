@@ -171,4 +171,16 @@ const updateUser = async (id, user) => {
   }
 };
 
+<<<<<<< HEAD
 module.exports = { getAllUser, getUser, createUser, alterUser, updateUser, deleteUser, registerUser, updateRegisteredUser };
+=======
+const getPreferred = async () => {
+  try {
+    const allUserPreferences = await db.any('SELECT * FROM mate WHERE ')
+  } catch (error) {
+    return error
+  }
+}
+
+module.exports = { getAllUser, getUser, createUser, updateUser, deleteUser, registerUser, updateRegisteredUser };
+>>>>>>> 879113a (bio and image table added, seeded, routes done)

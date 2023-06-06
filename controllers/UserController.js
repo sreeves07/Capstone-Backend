@@ -13,9 +13,14 @@ const {
 } = require('../queries/User');
 const answersController = require('./AnswerController');
 const likedUserController = require('./LikedUserController');
+const imageController = require('./ImageController');
+const bioController = require('./BioController')
+
 
 user.use('/:uid/answers', answersController);
 user.use('/:uid/likes', likedUserController);
+user.use('/:mateId/images', imageController);
+user.use('/:mateId/bios', bioController);
 
 //Index
 user.get('/', async (req, res) => {

@@ -1,9 +1,9 @@
 \c bestmates_app
 
-INSERT INTO mate (uid, first_name, last_name, email, city, state, zip_code, birthday, gender, sexual_orientation, has_pets, has_open_rooms, is_smoker, has_kids, is_disabled, is_sharing_bills, is_neat, is_religious, move_in_date, max_rent, credit_score, income, profile_image, small_bio)
+INSERT INTO mate (uid, first_name, last_name, email, city, state, zip_code, birthday, gender, sexual_orientation, has_pets, has_open_rooms, is_smoker, has_kids, is_disabled, is_sharing_bills, is_neat, is_religious, move_in_date, max_rent, credit_score, income)
 VALUES
-    ('j2hfui3FH83hGHuehfg2', 'John', 'Doe', 'john.doe@gmail.com', 'New York City', 'NY', 10001, '1998-06-01', 'Male', 'Straight', true, false, false, false, false, true, true, true, '2023-06-01', 1500, 750, 50000,'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735294/Bestmates/joseph-gonzalez-iFgRcqHznqg-unsplash_yreuvt.jpg', 'I love to travel and try new foods.'),
-    ('jueF7283TJhuf87hfGit', 'Jane', 'Smith', 'jane.smith@hotmail.com', 'Los Angeles', 'CA', 90001, '1991-09-12', 'Female', 'Bisexual', false, true, true, true, false, true, false, false, '2023-06-01', 1800, 800, 60000, 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683733932/michael-dam-mEZ3PoFGs_k-unsplash_xnw5af.jpg', 'I enjoy reading and playing video games.');
+    ('j2hfui3FH83hGHuehfg2', 'John', 'Doe', 'john.doe@gmail.com', 'New York City', 'NY', 10001, '1998-06-01', 'Male', 'Straight', true, false, false, false, false, true, true, true, '2023-06-01', 1500, 750, 50000),
+    ('jueF7283TJhuf87hfGit', 'Jane', 'Smith', 'jane.smith@hotmail.com', 'Los Angeles', 'CA', 90001, '1991-09-12', 'Female', 'Bisexual', false, true, true, true, false, true, false, false, '2023-06-01', 1800, 800, 60000);
 --     ('Mike', 'Johnson', 'mike.johnson@yahoo.com', 'Chicago', 'IL', 60601, '1983-04-08', 'Male', 'Gay', true, false, false, true, false, false, true, false, '2023-06-15', 1200, 700, 40000, 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735471/Bestmates/ben-den-engelsen-YUu9UAcOKZ4-unsplash_ijpazy.jpg', 'I am a fitness enthusiast and love to hike.', 'nonRe@l!d12345'),
 --     ('Sarah', 'Lee', 'sarah.lee@gmail.com', 'Houston', 'TX', 77001, '1995-02-14', 'Female', 'Straight', true, false, true, false, false, true, false, true, '2023-06-01', 1300, 650, 45000, 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735438/Bestmates/christopher-campbell-rDEOVtE7vOs-unsplash_ywjdln.jpg', 'I am a musician and enjoy playing guitar.', 'nonRe@l!d12345'),
 --     ('Tom', 'Wang', 'tom.wang@hotmail.com', 'San Francisco', 'CA', 94102, '1998-08-23', 'Male', 'Bisexual', false, true, false, false, false, true, true, false, '2023-06-15', 1700, 750, 55000, 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735510/Bestmates/jurica-koletic-7YVZYZeITc8-unsplash_fad6f1.jpg', 'I am a foodie and love to cook.', 'nonRe@l!d12345'),
@@ -43,3 +43,11 @@ VALUES
 INSERT INTO liked_user (mate_uid, liked_mate_uid) VALUES 
     ('j2hfui3FH83hGHuehfg2', 'jueF7283TJhuf87hfGit'),
     ('jueF7283TJhuf87hfGit', 'j2hfui3FH83hGHuehfg2');
+
+INSERT INTO images (mate_uid, profile_image) VALUES 
+    ('j2hfui3FH83hGHuehfg2', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735294/Bestmates/joseph-gonzalez-iFgRcqHznqg-unsplash_yreuvt.jpg'),
+    ('jueF7283TJhuf87hfGit', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683733932/michael-dam-mEZ3PoFGs_k-unsplash_xnw5af.jpg');
+
+INSERT INTO bio (mate_uid, small_bio) VALUES 
+    ('j2hfui3FH83hGHuehfg2', 'I love to travel and try new foods.'),
+    ('jueF7283TJhuf87hfGit',  'I enjoy reading and playing video games.');
