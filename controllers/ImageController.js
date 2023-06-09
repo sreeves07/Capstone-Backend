@@ -41,7 +41,7 @@ image.post('/', async (req, res) => {
 });
 
 //Delete
-image.delete('/:id', async (req, res) => {
+image.delete('/:uid', async (req, res) => {
   try {
     const { id } = req.params;
     const deletedImage = await deleteImage(id);
@@ -52,7 +52,7 @@ image.delete('/:id', async (req, res) => {
 });
 
 //Update
-image.put('/:id', async (req, res) => {
+image.put('/:uid', async (req, res) => {
   try {
     const { id } = req.params;
     const updatedImage = await updateImage(id, req.body);
