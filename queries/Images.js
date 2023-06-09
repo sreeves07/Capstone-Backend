@@ -37,10 +37,10 @@ const createImage = async (image) => {
 };
 
 //Delete
-const deleteImage = async (uid) => {
+const deleteImage = async (id) => {
   try {
     const deletedImage = await db.one(
-      'DELETE FROM images WHERE uid=$1 RETURNING *',
+      'DELETE FROM images WHERE id=$1 RETURNING *',
       uid,
     );
     return deletedImage;

@@ -11,9 +11,9 @@ const getAllBios = async (uid) => {
 };
 
 //Show
-const getBio = async (uid) => {
+const getBio = async (id) => {
   try {
-    const oneBio = await db.any('SELECT * FROM bio WHERE id=$1', uid);
+    const oneBio = await db.any('SELECT * FROM bio WHERE id=$1', id);
     return oneBio;
   } catch (error) {
     return { error: 'ID NOT FOUND' };
@@ -34,10 +34,10 @@ const createBio = async (bio) => {
 };
 
 //Delete
-const deleteBio = async (uid) => {
+const deleteBio = async (id) => {
   try {
     const deletedBio = await db.one(
-      'DELETE FROM bio WHERE uid=$1 RETURNING *',
+      'DELETE FROM bio WHERE id=$1 RETURNING *',
       id,
     );
     return deletedBio;
