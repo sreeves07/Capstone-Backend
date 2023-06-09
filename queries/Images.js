@@ -14,9 +14,9 @@ const getAllImages = async (uid) => {
 };
 
 //Show
-const getImage = async (uid) => {
+const getImage = async (id) => {
   try {
-    const oneImage = await db.any('SELECT * FROM images WHERE id=$1', uid);
+    const oneImage = await db.any('SELECT * FROM images WHERE id=$1', id);
     return oneImage;
   } catch (error) {
     return { error: 'ID NOT FOUND' };
