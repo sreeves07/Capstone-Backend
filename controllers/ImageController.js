@@ -10,9 +10,9 @@ const {
 
 //Index
 image.get('/', async (req, res) => {
-  const { mateId } = req.params;
+  const { uid } = req.params;
   try {
-    const allImages = await getAllImages(mateId);
+    const allImages = await getAllImages(uid);
     res.status(200).json(allImages);
   } catch (error) {
     res.status(200).json({ error: 'server error' });
@@ -20,9 +20,9 @@ image.get('/', async (req, res) => {
 });
 
 //Show
-image.get('/:uid', async (req, res) => {
-  const { uid } = req.params;
-  const image = await getImage(uid);
+image.get('/:id', async (req, res) => {
+  const { id } = req.params;
+  const image = await getImage(id);
   if (image[0]) {
     res.status(200).json(image);
   } else {
