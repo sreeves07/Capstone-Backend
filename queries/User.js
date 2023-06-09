@@ -158,6 +158,15 @@ const updateUser = async (id, user) => {
   }
 };
 
+const getFilteredUsers = () => {
+  try {
+    
+  } catch (error) {
+    return error
+  }
+}
+;
+
 //
 // gender_preference VARCHAR(20),
 // pets_preference BOOLEAN,
