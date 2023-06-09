@@ -28,9 +28,7 @@ CREATE TABLE mate (
     move_in_date DATE,
     max_rent INT,
     credit_score INT,
-    income INT,
-    profile_image TEXT,
-    small_bio VARCHAR(100)
+    income INT
 );
 
 DROP TABLE IF EXISTS answers;
