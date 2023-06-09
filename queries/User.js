@@ -24,7 +24,7 @@ const getUser = async (uid) => {
 const createUser = async (uid, user) => {
   try {
     const newUser = await db.one(
-      'UPDATE mate SET first_name=$1, last_name=$2, city=$3, state=$4, zip_code=$5, birthday=$6, gender=$7, sexual_orientation=$8, has_pets=$9, has_open_rooms=$10, is_smoker=$11, has_kids=$12, is_disabled=$13, is_sharing_bills=$14, is_neat=$15, is_religious=$16, move_in_date=$17, max_rent=$18, credit_score=$19, income=$20, profile_image=$21, small_bio=$22 WHERE uid=$23 RETURNING *',
+      'UPDATE mate SET first_name=$1, last_name=$2, city=$3, state=$4, zip_code=$5, birthday=$6, gender=$7, sexual_orientation=$8, has_pets=$9, has_open_rooms=$10, is_smoker=$11, has_kids=$12, is_disabled=$13, is_sharing_bills=$14, is_neat=$15, is_religious=$16, move_in_date=$17, max_rent=$18, credit_score=$19, income=$20 WHERE uid=$21 RETURNING *',
       [
         user.first_name,
         user.last_name,
@@ -46,8 +46,6 @@ const createUser = async (uid, user) => {
         user.max_rent,
         user.credit_score,
         user.income,
-        user.profile_image,
-        user.small_bio,
         uid
       ],
     );
@@ -86,7 +84,7 @@ const deleteUser = async (id) => {
 const updateRegisteredUser = async (id) => {
   try {
     const updatedRegisteredUser = await db.one(
-      'UPDATE mate SET first_name=$1, last_name=$2, city=$3, state=$4, zip_code=$5, birthday=$6, gender=$7, sexual_orientation=$8, has_pets=$9, has_open_rooms=$10, is_smoker=$11, has_kids=$12, is_disabled=$13, is_sharing_bills=$14, is_neat=$15, is_religious=$16, move_in_date=$17, max_rent=$18, credit_score=$19, income=$20, profile_image=$21, small_bio=$22, uid=$23 WHERE id=$24 RETURNING *',
+      'UPDATE mate SET first_name=$1, last_name=$2, city=$3, state=$4, zip_code=$5, birthday=$6, gender=$7, sexual_orientation=$8, has_pets=$9, has_open_rooms=$10, is_smoker=$11, has_kids=$12, is_disabled=$13, is_sharing_bills=$14, is_neat=$15, is_religious=$16, move_in_date=$17, max_rent=$18, credit_score=$19, income=$20, uid=$21 WHERE id=$22 RETURNING *',
     [
       user.first_name,
       user.last_name,
@@ -109,8 +107,6 @@ const updateRegisteredUser = async (id) => {
       user.max_rent,
       user.credit_score,
       user.income,
-      user.profile_image,
-      user.small_bio,
       user.uid,
       id,
     ],
@@ -158,9 +154,9 @@ const updateUser = async (id, user) => {
   }
 };
 
-const getFilteredUsers = () => {
+const getFilteredUsers = async () => {
   try {
-    
+    const filteredUsers = await db.any(`SELECT * FROM users WHERE pets_preference = ${pets_preference} AND open_rooms_preference = ${open_rooms_preference} AND `)
   } catch (error) {
     return error
   }
