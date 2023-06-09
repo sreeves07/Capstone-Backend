@@ -4,7 +4,7 @@ const db = require('../db/Confiq');
 const getAllImages = async (uid) => {
   try {
     const allImages = await db.any(
-      'SELECT * FROM images WHERE mate_uid=$1',
+      'SELECT * FROM images WHERE uid=$1',
       uid,
     );
     return allImages;
@@ -14,9 +14,9 @@ const getAllImages = async (uid) => {
 };
 
 //Show
-const getImage = async (id) => {
+const getImage = async (uid) => {
   try {
-    const oneImage = await db.any('SELECT * FROM images WHERE id=$1', id);
+    const oneImage = await db.any('SELECT * FROM images WHERE uid=$1', uid);
     return oneImage;
   } catch (error) {
     return { error: 'ID NOT FOUND' };
@@ -37,11 +37,11 @@ const createImage = async (image) => {
 };
 
 //Delete
-const deleteImage = async (id) => {
+const deleteImage = async (uid) => {
   try {
     const deletedImage = await db.one(
-      'DELETE FROM images WHERE id=$1 RETURNING *',
-      id,
+      'DELETE FROM images WHERE uid=$1 RETURNING *',
+      uid,
     );
     return deletedImage;
   } catch (error) {
@@ -53,7 +53,7 @@ const deleteImage = async (id) => {
 const updateImage = async (uid, image) => {
   try {
     const updatedImage = await db.one(
-      'UPDATE images SET profile_image=$1 WHERE id=$2 RETURNING *',
+      'UPDATE images SET profile_image=$1 WHERE uid=$2 RETURNING *',
       [image.Profile_Image, uid],
     );
     return updatedImage;
