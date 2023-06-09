@@ -24,21 +24,21 @@ INSERT INTO answers (mate_uid, gender_preference, pets_preference, sexual_orient
 VALUES 
     ('j2hfui3FH83hGHuehfg2', 'Male', true, 'Pansexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
     ('jueF7283TJhuf87hfGit', 'Male', false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true);
-    ('3', 'Female', false, 'Heterosexual', true, false, false, false, false, true, true, true, true, true, true, true, false),
-    ('4', 'Male', false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
-    ('5', 'Male', false, 'Homosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
-    ('6', 'Female', true, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
-    ('7', 'Male', false, 'Homosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
-    ('8', 'Non-Binary', false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
-    ('9', 'Male', true, 'Pansexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
-    ('10', 'Male', true, 'Bisexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
-    ('11', 'female', false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
-    ('12', 'Male', false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
-    ('13', 'Male', false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
-    ('14', 'Non-Binary', false, 'Homosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
-    ('15', 'Male', true, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
-    ('16', 'Female', false, 'Homosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
-    ('17', 'Male', false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true);
+    ('j2hfui3FH83hGHuehfg2', 'Female', false, 'Heterosexual', true, false, false, false, false, true, true, true, true, true, true, true, false),
+    ('j2hfui3FH83hGHuehfg2', 'Male', false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('j2hfui3FH83hGHuehfg2', 'Male', false, 'Homosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('j2hfui3FH83hGHuehfg2', 'Female', true, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('j2hfui3FH83hGHuehfg2', 'Male', false, 'Homosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('j2hfui3FH83hGHuehfg2', 'Non-Binary', false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('j2hfui3FH83hGHuehfg2', 'Male', true, 'Pansexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('j2hfui3FH83hGHuehfg2', 'Male', true, 'Bisexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('j2hfui3FH83hGHuehfg2', 'female', false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('j2hfui3FH83hGHuehfg2', 'Male', false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('j2hfui3FH83hGHuehfg2', 'Male', false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('j2hfui3FH83hGHuehfg2', 'Non-Binary', false, 'Homosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('j2hfui3FH83hGHuehfg2', 'Male', true, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('j2hfui3FH83hGHuehfg2', 'Female', false, 'Homosexual', false, true, false, false, false, false, true, true, true, true, true, true, true),
+    ('j2hfui3FH83hGHuehfg2', 'Male', false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true);
 
 INSERT INTO liked_user (mate_uid, liked_mate_uid) VALUES 
     ('j2hfui3FH83hGHuehfg2', 'jueF7283TJhuf87hfGit'),
