@@ -19,8 +19,8 @@ const bioController = require('./BioController')
 
 user.use('/:uid/answers', answersController);
 user.use('/:uid/likes', likedUserController);
-user.use('/:mateId/images', imageController);
-user.use('/:mateId/bios', bioController);
+user.use('/:uid/images', imageController);
+user.use('/:uid/bios', bioController);
 
 //Index
 user.get('/', async (req, res) => {
