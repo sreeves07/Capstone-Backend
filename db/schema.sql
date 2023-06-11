@@ -25,6 +25,10 @@ CREATE TABLE mate (
     is_sharing_bills BOOLEAN,
     is_neat BOOLEAN,
     is_religious BOOLEAN,
+    is_musician BOOLEAN,
+    is_singer BOOLEAN,
+    is_partyhost BOOLEAN,
+    is_disabled BOOLEAN,
     move_in_date DATE,
     max_rent INT,
     credit_score INT,
@@ -52,6 +56,10 @@ CREATE TABLE answers (
     religious_preference BOOLEAN,
     good_credit_preference BOOLEAN,
     high_income_preference BOOLEAN,
+    disability_preference BOOLEAN,
+    musician_preference BOOLEAN,
+    partyhost_preference BOOLEAN,
+    singer_preference BOOLEAN,
     CONSTRAINT fk0_mate
       FOREIGN KEY(mate_uid) 
 	    REFERENCES mate(uid)
