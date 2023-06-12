@@ -21,7 +21,6 @@ CREATE TABLE mate (
     has_open_rooms BOOLEAN,
     is_smoker BOOLEAN,
     has_kids BOOLEAN,
-    is_disabled BOOLEAN,
     is_sharing_bills BOOLEAN,
     is_neat BOOLEAN,
     is_religious BOOLEAN,
