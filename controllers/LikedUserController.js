@@ -11,9 +11,9 @@ const {
 
 //Index
 likedUser.get('/', async (req, res) => {
-  const { mateId } = req.params;
+  const { uid } = req.params;
   try {
-    const allLikes = await getAllLikedUsers(mateId);
+    const allLikes = await getAllLikedUsers(uid);
     res.status(200).json(allLikes);
   } catch (error) {
     res.status(200).json({ error: 'server error' });
