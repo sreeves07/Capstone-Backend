@@ -1,11 +1,11 @@
 const db = require('../db/Confiq');
 
 //Index
-const getAllLikedUsers = async (mate_id) => {
+const getAllLikedUsers = async (mate_uid) => {
   try {
     const allLikes = await db.any(
-      'SELECT * FROM liked_user WHERE mate_id=$1',
-      mate_id,
+      'SELECT * FROM liked_user WHERE mate_uid=$1',
+      mate_uid,
     );
     return allLikes;
   } catch (error) {
@@ -27,8 +27,8 @@ const getLikedUser = async (id) => {
 const createLikedUser = async (likedUser) => {
   try {
     const newLike = await db.one(
-      'INSERT INTO liked_user (mate_id, MateId_liked_user) VALUES ($1, $2) RETURNING *',
-      [likedUser.mate_id, likedUser.mateId_liked_user],
+      'INSERT INTO liked_user (mate_uid, liked_mate_uid) VALUES ($1, $2) RETURNING *',
+      [likedUser.mate_uid, likedUser.liked_mate_uid],
     );
     return newLike;
   } catch (error) {
