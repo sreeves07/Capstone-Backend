@@ -44,7 +44,7 @@ likedUser.post('/', async (req, res) => {
 //Delete
 likedUser.delete('/:uid', async (req, res) => {
   try {
-    const { id } = req.params;
+    const { uid } = req.params;
     const deletedLikedUser = await deleteLikedUser(uid);
     res.status(200).json(deletedLikedUser);
   } catch (error) {
@@ -55,7 +55,7 @@ likedUser.delete('/:uid', async (req, res) => {
 //Update
 likedUser.put('/:uid', async (req, res) => {
   try {
-    const { id } = req.params;
+    const { uid } = req.params;
     const updatedLikedUser = await updateLikedUser(uid, req.body);
     res.status(200).json(updatedLikedUser);
   } catch (error) {
