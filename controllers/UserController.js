@@ -54,6 +54,8 @@ user.put('/:uid', async (req, res) => {
   }
 });
 
+
+
 //Alter Prop
 user.patch('/:uid', async (req, res) => {
   try {
@@ -87,10 +89,10 @@ user.delete('/:id', async (req, res) => {
 });
 
 //Update Registered User
-user.put('/register/:id', async (req, res) => {
+user.put('/register/:uid', async (req, res) => {
   try {
-    const { id } = req.params;
-    const updatedUser = await updateRegisteredUser(id, req.body);
+    const { uid } = req.params;
+    const updatedUser = await updateRegisteredUser(uid, req.body);
     res.status(200).json(updatedUser);
   } catch (error) {
     res.status(404).json({ error: 'Failed to update new user' });

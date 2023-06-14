@@ -24,7 +24,7 @@ const getUser = async (uid) => {
 const createUser = async (uid, user) => {
   try {
     const newUser = await db.one(
-      'UPDATE mate SET first_name=$1, last_name=$2, city=$3, state=$4, zip_code=$5, birthday=$6, gender=$7, sexual_orientation=$8, has_pets=$9, has_open_rooms=$10, is_smoker=$11, has_kids=$12, is_disabled=$13, is_sharing_bills=$14, is_neat=$15, is_religious=$16, is_musician=$17, is_singer=$18, is_partyhost=$19, is_disabled=$19, move_in_date=$20, max_rent=$21, credit_score=$22, income=$23 WHERE uid=$24 RETURNING *',
+      'UPDATE mate SET first_name=$1, last_name=$2, city=$3, state=$4, zip_code=$5, birthday=$6, gender=$7, sexual_orientation=$8, has_pets=$9, has_open_rooms=$10, has_private_room=$11, has_private_bathroom=$12, has_house=$13, has_high_rise=$14, is_smoker=$15, has_kids=$16, is_disabled=$17, is_sharing_bills=$18, is_neat=$19, is_religious=$20, is_musician=$21, is_partyhost=$22, move_in_date=$23, max_rent=$24, credit_score=$25, income=$26 WHERE uid=$27 RETURNING *',
       [
         user.first_name,
         user.last_name,
@@ -36,16 +36,18 @@ const createUser = async (uid, user) => {
         user.sexual_orientation,
         user.has_pets,
         user.has_open_rooms,
+        user.has_private_bathroom,
+        user.has_private_room,
+        user.has_house,
+        user.has_high_rise,
         user.is_smoker,
         user.has_kids,
         user.is_disabled,
         user.is_sharing_bills,
         user.is_neat,
         user.is_religious,
-        user.is_musician,
-        user.is_singer,  
+        user.is_musician,  
         user.is_partyhost,  
-        user.is_disabled,
         user.move_in_date,
         user.max_rent,
         user.credit_score,
@@ -85,10 +87,10 @@ const deleteUser = async (id) => {
 };
 
 //Update Registered User
-const updateRegisteredUser = async (id) => {
+const updateRegisteredUser = async (uid) => {
   try {
     const updatedRegisteredUser = await db.one(
-      'UPDATE mate SET first_name=$1, last_name=$2, city=$3, state=$4, zip_code=$5, birthday=$6, gender=$7, sexual_orientation=$8, has_pets=$9, has_open_rooms=$10, is_smoker=$11, has_kids=$12, is_disabled=$13, is_sharing_bills=$14, is_neat=$15, is_religious=$16,  is_musician=$17, is_singer=$18, is_partyhost=$19, is_disabled=$19, move_in_date=$20, max_rent=$21, credit_score=$22, income=$23, uid=$24 WHERE id=$25 RETURNING *',
+      'UPDATE mate SET first_name=$1, last_name=$2, email=$3, city=$4, state=$5, zip_code=$6, birthday=$7, gender=$8, sexual_orientation=$9, has_pets=$10, has_open_rooms=$11, has_private_room=$12, has_private_bathroom=$13, has_house=$14, has_high_rise=$15, is_smoker=$16, has_kids=$17, is_disabled=$18, is_sharing_bills=$19, is_neat=$20, is_religious=$21,  is_musician=$22, is_partyhost=$23, move_in_date=$24, max_rent=$25, credit_score=$26, income=$27 WHERE uid=$28 RETURNING *',
     [
       user.first_name,
       user.last_name,
@@ -101,22 +103,23 @@ const updateRegisteredUser = async (id) => {
       user.sexual_orientation,
       user.has_pets,
       user.has_open_rooms,
+      user.has_private_bathroom,
+      user.has_private_room,
+      user.has_house,
+      user.has_high_rise,
       user.is_smoker,
       user.has_kids,
       user.is_disabled,
       user.is_sharing_bills,
       user.is_neat,
       user.is_religious,
-      user.is_musician,
-      user.is_singer,  
+      user.is_musician,  
       user.is_partyhost,  
-      user.is_disabled,
       user.move_in_date,
       user.max_rent,
       user.credit_score,
       user.income,
-      user.uid,
-      id,
+      uid,
     ],
   )
   return updatedRegisteredUser
@@ -126,10 +129,10 @@ const updateRegisteredUser = async (id) => {
 }
 
 //Update
-const updateUser = async (id, user) => {
+const updateUser = async (uid, user) => {
   try {
     const updatedUser = await db.one(
-      'UPDATE mate SET first_name=$1, last_name=$2, email=$3, city=$4, state=$5, zip_code=$6, birthday=$7, gender=$8, sexual_orientation=$9, has_pets=$10, has_open_rooms=$11, is_smoker=$12, has_kids=$13, is_disabled=$14, is_sharing_bills=$15, is_neat=$16, is_religious=$17, move_in_date=$18, max_rent=$19, credit_score=$20, income=$21, profile_image=$22, small_bio=$23, uid=$24 WHERE id=$25 RETURNING *',
+      'UPDATE mate SET first_name=$1, last_name=$2, email=$3, city=$4, state=$5, zip_code=$6, birthday=$7, gender=$8, sexual_orientation=$9, has_pets=$10, has_open_rooms=$11, has_private_room=$12, has_private_bathroom=$13, has_house=$14, has_high_rise=$14 is_smoker=$15, has_kids=$16, is_disabled=$17, is_sharing_bills=$18, is_neat=$19, is_religious=$20, move_in_date=$21, max_rent=$22, credit_score=$23, income=$24 WHERE uid=$25 RETURNING *',
       [
         user.first_name,
         user.last_name,
@@ -142,22 +145,23 @@ const updateUser = async (id, user) => {
         user.sexual_orientation,
         user.has_pets,
         user.has_open_rooms,
+        user.has_private_room,
+        user.has_private_bathroom,
+        user.has_house,
+        user.has_high_rise,
         user.is_smoker,
         user.has_kids,
         user.is_disabled,
         user.is_sharing_bills,
         user.is_neat,
         user.is_religious,
-        user.is_musician,
-        user.is_singer,  
+        user.is_musician,  
         user.is_partyhost,  
-        user.is_disabled,
         user.move_in_date,
         user.max_rent,
         user.credit_score,
         user.income,
-        user.uid,
-        id,
+        uid
       ],
     );
     return updatedUser;
