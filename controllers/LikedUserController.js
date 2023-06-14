@@ -21,9 +21,9 @@ likedUser.get('/', async (req, res) => {
 });
 
 //Show
-likedUser.get('/:id', async (req, res) => {
-  const { id } = req.params;
-  const liked = await getLikedUser(id);
+likedUser.get('/:uid', async (req, res) => {
+  const { uid } = req.params;
+  const liked = await getLikedUser(uid);
   if (liked[0]) {
     res.status(200).json(liked);
   } else {
@@ -42,10 +42,10 @@ likedUser.post('/', async (req, res) => {
 });
 
 //Delete
-likedUser.delete('/:id', async (req, res) => {
+likedUser.delete('/:uid', async (req, res) => {
   try {
     const { id } = req.params;
-    const deletedLikedUser = await deleteLikedUser(id);
+    const deletedLikedUser = await deleteLikedUser(uid);
     res.status(200).json(deletedLikedUser);
   } catch (error) {
     res.status(404).json({ error: 'ID NOT FOUND' });
@@ -53,10 +53,10 @@ likedUser.delete('/:id', async (req, res) => {
 });
 
 //Update
-likedUser.put('/:id', async (req, res) => {
+likedUser.put('/:uid', async (req, res) => {
   try {
     const { id } = req.params;
-    const updatedLikedUser = await updateLikedUser(id, req.body);
+    const updatedLikedUser = await updateLikedUser(uid, req.body);
     res.status(200).json(updatedLikedUser);
   } catch (error) {
     res.status(404).json({ error: 'Failed to update Liked-user' });
