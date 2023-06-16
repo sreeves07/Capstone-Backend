@@ -20,7 +20,7 @@ VALUES
     ('jueF7283TJhuf87hfGin','Catherine', 'Martin', 'catherine.martin@gmail.com', 'Philadelphia', 'PA', 19103, '1986-05-18', 'Female', 'Lesbian', true, false, true, false, false,true, false, true, false, true, false, true, true, true, '2023-07-15', 2700, 670, 67000),
     ('jueF7283TJhuf87hfGio','Alex', 'Lee', 'alex.lee@hotmail.com', 'Minneapolis', 'MN', 55401, '2000-01-02', 'Non-binary', 'Queer', true, false, false, false, false, true, false, true,true,  true, false, true, true, true,'2023-06-15', 1350, 750, 85000);
 
-INSERT INTO answers (mate_uid, gender_preference, pets_preference, sexual_orientation_preference, open_rooms_preference, neat_preference, kids_preference, low_noise_preference, smoker_preference, high_rise_preference, house_preference, private_bathroom_preference, private_room_preference, share_bills_preference, religious_preference, good_credit_preference, high_income_preference, disability_preference, musician_preference, partyhost_preference, singer_preference)
+INSERT INTO answers (mate_uid, gender_preference, pets_preference, sexual_orientation_preference, open_rooms_preference, neat_preference, kids_preference, low_noise_preference, smoker_preference, high_rise_preference, house_preference, private_bathroom_preference, private_room_preference, share_bills_preference, religious_preference, good_credit_preference, high_income_preference, disability_preference, musician_preference, partyhost_preference, employed_preference)
 VALUES 
     ('j2hfui3FH83hGHuehfg2', 'Male', true, 'Pansexual', false, true, false, false, false, false, true, true, true, true, true, true, true, true, true, true, true),
     ('jueF7283TJhuf87hfGit', 'Male', false, 'Heterosexual', false, true, false, false, false, false, true, true, true, true, true, true, true, true, true, true, true),
@@ -42,7 +42,7 @@ VALUES
 
 INSERT INTO liked_user (mate_uid, liked_mate_uid) VALUES 
     ('j2hfui3FH83hGHuehfg2', 'jueF7283TJhuf87hfGit'),
-    ('jueF7283TJhuf87hfGit', 'j2hfui3FH83hGHuehfg2');
+    ('jueF7283TJhuf87hfGio', 'jueF7283TJhuf87hfGin');
 
 INSERT INTO images (mate_uid, profile_image) VALUES 
     ('j2hfui3FH83hGHuehfg2', 'https://res.cloudinary.com/dmhszd8wj/image/upload/v1683735294/Bestmates/joseph-gonzalez-iFgRcqHznqg-unsplash_yreuvt.jpg'),

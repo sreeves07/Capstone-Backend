@@ -61,7 +61,7 @@ CREATE TABLE answers (
     disability_preference BOOLEAN,
     musician_preference BOOLEAN,
     partyhost_preference BOOLEAN,
-    singer_preference BOOLEAN,
+    employed_preference BOOLEAN,
     CONSTRAINT fk0_mate
       FOREIGN KEY(mate_uid) 
 	    REFERENCES mate(uid)
