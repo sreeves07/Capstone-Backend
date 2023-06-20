@@ -108,4 +108,4 @@ CREATE TABLE bio (
       FOREIGN KEY(mate_uid) 
 	    REFERENCES mate(uid)
     ON DELETE CASCADE
-)
+);
