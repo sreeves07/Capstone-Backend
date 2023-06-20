@@ -27,6 +27,8 @@ CREATE TABLE mate (
     has_kids BOOLEAN,
     is_sharing_bills BOOLEAN,
     is_neat BOOLEAN,
+    is_employed BOOLEAN,
+    low_noise BOOLEAN,
     is_religious BOOLEAN,
     is_musician BOOLEAN,
     is_partyhost BOOLEAN,
